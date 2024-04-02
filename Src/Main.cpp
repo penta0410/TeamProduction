@@ -1,6 +1,14 @@
-//ウィンドウを表示するプログラム（ひな形）
 
-#include "DxLib.h"	//DXライブラリのインクルード
+#include "DxLib.h"
+#include "Scene/Scene.h"
+#include "../Src/Scene/Title/title.h"
+#include "../Src/Scene/Play/play.h"
+#include "../Src/Scene/Clear/clear.h"
+#include "../Src/Scene/GameOver/gameover.h"
+#include "Collision/Collision.h"
+#include "Input/Input.h"
+#include "Common.h"
+#include "FPS/fps.h"
 
 // define
 #define	SCREEN_SIZE_X	640	// X方向の画面サイズを指定
