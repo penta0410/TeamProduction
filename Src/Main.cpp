@@ -13,8 +13,16 @@
 //フレームレート情報変数
 FrameRateInfo frameRateInfo;
 
-//現在のシーンID
+//現在のシーンID(起動時最初に表示されるシーン)
 int g_CurrentSceneID = SCENE_ID_INIT_TITLE;
+
+//クラス宣言
+Title m_title;	//タイトル
+StageSelect m_stageselect	//ステージ選択
+Shop m_shop		//ショップ
+Play m_play     //プレイ
+Clear m_clear	//クリア
+GameOver m_gameover		//ゲームオーバー
 
 // Win32アプリケーションは WinMain関数 から始まる
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -23,12 +31,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	ChangeWindowMode(true);
 
 	//DXライブラリの初期化
-	if (DxLib_Init() == -1) {
-		return -1;
-	}
+	if (DxLib_Init() == -1) {return -1;}
 
 	// 画面サイズを変更
-	SetGraphMode(WINDOW_WIDTH, WINDOW_HEIGHT, 32);
+	SetGraphMode(WINDOW2_WIDTH, WINDOW2_HEIGHT, 32);
 
 	//描画するスクリーンを設定する
 	SetDrawScreen(DX_SCREEN_BACK);
@@ -84,6 +90,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			case SCENE_ID_INIT_TITLE:
 			{
 				//タイトル初期化
+				m_title.InitTitle();
 			} break;
 			case SCENE_ID_LOOP_TITLE:
 			{

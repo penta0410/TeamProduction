@@ -1,9 +1,6 @@
 #include "DxLib.h"
 #include "../FPS/fps.h"
 #include "../Common.h"
-#include "../Scene/Title/SceneTitle.h"
-
-TITLE m_title;
 
 //FPSŒvŽZ
 void CalcFPS()
@@ -36,9 +33,7 @@ void DrawFPS()
 {
 	unsigned int color = GetColor(255, 30, 30);
 
-	if (m_title.m_start_animetion_flag == 0)
-	{
-		DrawFormatString(1190, 700, color, "FPS[%.2f]", frameRateInfo.fps);
-	}
+	DrawFormatString(1190, 700, color, "FPS[%.2f]", frameRateInfo.fps);
+	
 
 }

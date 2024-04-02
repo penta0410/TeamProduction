@@ -3,7 +3,6 @@
 #include "Screen.h"
 #include "../Player/Player.h"
 #include "../Common.h"
-#include "../Scene/Play/ScenePlay.h"
 
 //スクリーンのワールド座標
 Screen::Screen()
