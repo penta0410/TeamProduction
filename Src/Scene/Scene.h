@@ -1,9 +1,5 @@
-
 #ifndef __SCENE_H__
 #define __SCENE_H__
-
-
-
 
 enum SCENE_ID
 {
@@ -38,6 +34,7 @@ enum SCENE_ID
 	SCENE_ID_FIN_GAMEOVER,
 
 };
+
 //åªç›ÇÃÉVÅ[ÉìID
 extern int g_CurrentSceneID;
 
