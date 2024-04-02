@@ -16,10 +16,165 @@
     <Filter Include="ソース ファイル\Src">
       <UniqueIdentifier>{e8f594f9-05f6-4816-8a51-d4bb1a498d24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Src\Enemy">
+      <UniqueIdentifier>{7623d767-830d-4dec-a90e-4ee4a6e8a5f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Scene">
+      <UniqueIdentifier>{0ba688ad-7520-48e6-b1d2-b49b689d0357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Player">
+      <UniqueIdentifier>{6df873e3-93c4-416e-b9af-ae274873cbb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Screen">
+      <UniqueIdentifier>{f36df669-7bf3-435c-a1d7-87e37f5db775}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Sound">
+      <UniqueIdentifier>{604e8d3d-cdac-4a14-bd3f-6a6ed0d75702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Transparent">
+      <UniqueIdentifier>{5f5a7d3b-3abf-4edb-89fd-4c45d9188be2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Collision">
+      <UniqueIdentifier>{107a7abb-9989-45c3-b6b3-b7888f05f489}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Input">
+      <UniqueIdentifier>{a7286b1d-b15f-4d0c-b6a2-f562b0610269}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Item">
+      <UniqueIdentifier>{8a60f3c7-377b-4935-b2a6-3516cfb03e20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\FPS">
+      <UniqueIdentifier>{bea800e0-3ccc-4000-b471-ac34ec7fb951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Effect">
+      <UniqueIdentifier>{c1ce28cb-84bb-439b-92de-013daeef95ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Scene\Clear">
+      <UniqueIdentifier>{8a397ed3-01e4-49b4-9de2-9396d0158fab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Scene\GameOver">
+      <UniqueIdentifier>{a5a4cf04-a219-4ddb-bfb4-37318ec9c2d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Scene\Play">
+      <UniqueIdentifier>{365261f5-4092-4023-9241-049d5737d462}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Scene\StageSelect">
+      <UniqueIdentifier>{35985c2c-a64a-4c28-b9cb-2d8f3b1edfc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Scene\Shop">
+      <UniqueIdentifier>{2b413368-4bf2-4daa-b2e9-66b5ac083137}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Scene\Title">
+      <UniqueIdentifier>{37633122-2889-49f7-aee4-fee0f009737d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Main.cpp">
       <Filter>ソース ファイル\Src</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Collision\Collision.cpp">
+      <Filter>ソース ファイル\Src\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Effect\Effect.cpp">
+      <Filter>ソース ファイル\Src\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\FPS\fps.cpp">
+      <Filter>ソース ファイル\Src\FPS</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Input\Input.cpp">
+      <Filter>ソース ファイル\Src\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Screen\Screen.cpp">
+      <Filter>ソース ファイル\Src\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Transparent\Transparent.cpp">
+      <Filter>ソース ファイル\Src\Transparent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Enemy\enemy.cpp">
+      <Filter>ソース ファイル\Src\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Item\item.cpp">
+      <Filter>ソース ファイル\Src\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Player\player.cpp">
+      <Filter>ソース ファイル\Src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Sound\sound.cpp">
+      <Filter>ソース ファイル\Src\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scene\Clear\clear.cpp">
+      <Filter>ソース ファイル\Src\Scene\Clear</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scene\GameOver\gameover.cpp">
+      <Filter>ソース ファイル\Src\Scene\GameOver</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scene\Shop\shop.cpp">
+      <Filter>ソース ファイル\Src\Scene\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scene\StageSelect\stageselect.cpp">
+      <Filter>ソース ファイル\Src\Scene\StageSelect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scene\Title\title.cpp">
+      <Filter>ソース ファイル\Src\Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scene\Play\play.cpp">
+      <Filter>ソース ファイル\Src\Scene\Play</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\Common.h">
+      <Filter>ソース ファイル\Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Collision\Collision.h">
+      <Filter>ソース ファイル\Src\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Effect\Effect.h">
+      <Filter>ソース ファイル\Src\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\FPS\fps.h">
+      <Filter>ソース ファイル\Src\FPS</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Input\Input.h">
+      <Filter>ソース ファイル\Src\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Screen\Screen.h">
+      <Filter>ソース ファイル\Src\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Transparent\Transparent.h">
+      <Filter>ソース ファイル\Src\Transparent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Enemy\enemy.h">
+      <Filter>ソース ファイル\Src\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Item\item.h">
+      <Filter>ソース ファイル\Src\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Player\player.h">
+      <Filter>ソース ファイル\Src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Sound\sound.h">
+      <Filter>ソース ファイル\Src\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\Clear\clear.h">
+      <Filter>ソース ファイル\Src\Scene\Clear</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\GameOver\gameover.h">
+      <Filter>ソース ファイル\Src\Scene\GameOver</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\Shop\shop.h">
+      <Filter>ソース ファイル\Src\Scene\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\StageSelect\stageselect.h">
+      <Filter>ソース ファイル\Src\Scene\StageSelect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\Title\title.h">
+      <Filter>ソース ファイル\Src\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\Play\play.h">
+      <Filter>ソース ファイル\Src\Scene\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\Scene.h">
+      <Filter>ソース ファイル\Src\Scene</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

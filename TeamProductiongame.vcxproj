@@ -19,7 +19,43 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Src\Collision\Collision.cpp" />
+    <ClCompile Include="Src\Effect\Effect.cpp" />
+    <ClCompile Include="Src\Enemy\enemy.cpp" />
+    <ClCompile Include="Src\FPS\fps.cpp" />
+    <ClCompile Include="Src\Input\Input.cpp" />
+    <ClCompile Include="Src\Item\item.cpp" />
     <ClCompile Include="Src\Main.cpp" />
+    <ClCompile Include="Src\Player\player.cpp" />
+    <ClCompile Include="Src\Scene\Clear\clear.cpp" />
+    <ClCompile Include="Src\Scene\GameOver\gameover.cpp" />
+    <ClCompile Include="Src\Scene\Play\play.cpp" />
+    <ClCompile Include="Src\Scene\Shop\shop.cpp" />
+    <ClCompile Include="Src\Scene\StageSelect\stageselect.cpp" />
+    <ClCompile Include="Src\Scene\Title\title.cpp" />
+    <ClCompile Include="Src\Screen\Screen.cpp" />
+    <ClCompile Include="Src\Sound\sound.cpp" />
+    <ClCompile Include="Src\Transparent\Transparent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\Collision\Collision.h" />
+    <ClInclude Include="Src\Common.h" />
+    <ClInclude Include="Src\Effect\Effect.h" />
+    <ClInclude Include="Src\Enemy\enemy.h" />
+    <ClInclude Include="Src\FPS\fps.h" />
+    <ClInclude Include="Src\Input\Input.h" />
+    <ClInclude Include="Src\Item\item.h" />
+    <ClInclude Include="Src\Player\player.h" />
+    <ClInclude Include="Src\Scene\Clear\clear.h" />
+    <ClInclude Include="Src\Scene\GameOver\gameover.h" />
+    <ClInclude Include="Src\Scene\Play\play.h" />
+    <ClInclude Include="Src\Scene\Scene.h" />
+    <ClInclude Include="Src\Scene\Shop\shop.h" />
+    <ClInclude Include="Src\Scene\StageSelect\stageselect.h" />
+    <ClInclude Include="Src\Scene\Title\title.h" />
+    <ClInclude Include="Src\Screen\Screen.h" />
+    <ClInclude Include="Src\Sound\sound.h" />
+    <ClInclude Include="Src\Transparent\Transparent.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
