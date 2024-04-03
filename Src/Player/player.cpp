@@ -33,7 +33,6 @@ void Player::Init()
 	DEF			     = PLAYER_DEFAULT_DEF;
 	EXPERIENCE_POINT = 0;
 	LEVEL		     = PLAYER_DEFAULT_LEVEL;
-
 }
 
 void Player::LoadPlayer()
@@ -74,6 +73,14 @@ void Player::Level_Up()
 		{
 			LEVEL++;
 			level_border_line += 5;
+		}
+	}
+	else if (LEVEL < PLAYER_MAX_LEVEL)
+	{
+		if (EXPERIENCE_POINT > level_border_line)
+		{
+			LEVEL++;
+			level_border_line *= 2;
 		}
 	}
 }

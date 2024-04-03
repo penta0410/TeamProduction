@@ -52,4 +52,18 @@ public:
 	bool Input_LeftAndRight();
 															//プレイヤーのレベル処理
 	void Level_Up();
+
+	class AttackPattern
+	{
+	private:
+		
+	public:
+		void beam();
+		void arrow();
+		void slash();
+		void fireball();
+		void coldball();
+		void thunderball();
+		void darkball();
+	};
 };
