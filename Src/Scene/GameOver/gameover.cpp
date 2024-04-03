@@ -34,7 +34,9 @@ void GameOver::DrawGameOver()
 {
 	
 	//デバッグ
-	DrawFormatString(0, 30, GetColor(255, 255, 255), 
+	DrawFormatString(0, 30, GetColor(255, 255, 255),
+		"ゲームオーバーシーンです。", true);
+	DrawFormatString(0, 130, GetColor(255, 255, 255), 
 		"ステージセレクトにはエンターを押してください", true);
 
 }

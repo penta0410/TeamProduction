@@ -64,13 +64,14 @@ void StageSelect::DrawStageSelect()
 
 	//デバッグ
 	DrawFormatString(100, 100, GetColor(255, 255, 255), 
-		"ステージ選択画面です", true);
+		"ステージセレクトシーンです。", true);
 	DrawFormatString(100, 200, GetColor(255, 255, 255),
 		"プレイシーンへはenterを押してください。", true);
 	DrawFormatString(100, 300, GetColor(255, 255, 255),
 		"ショップシーンへはtabを押してください。", true);
 	DrawFormatString(100, 400, GetColor(255, 255, 255),
 		"タイトルシーンへは左ctrlを押してください。", true);
+
 }
 
 //ステージセレクト後処理
@@ -81,4 +82,17 @@ void StageSelect::FinStageSelect()
 		//プレイシーンINITへ移動
 		g_CurrentSceneID = SCENE_ID_INIT_PLAY;
 	}
+
+	if (m_SceneFlag == 1)
+	{
+		//ショップシーンINITへ移動
+		g_CurrentSceneID = SCENE_ID_INIT_SHOP;
+	}
+
+	if (m_SceneFlag == 2)
+	{
+		//タイトルシーンINITへ移動
+		g_CurrentSceneID = SCENE_ID_INIT_TITLE;
+	}
+
 }
