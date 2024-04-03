@@ -18,7 +18,7 @@ void Shop::InitShop()
 void Shop::StepShop()
 {
 
-	//シーンへの遷移
+	//ステージセレクトシーンへの遷移
 	//Enterキー押されたなら
 	if (IsKeyPush(KEY_INPUT_RETURN))
 	{
@@ -28,15 +28,15 @@ void Shop::StepShop()
 		g_CurrentSceneID = SCENE_ID_FIN_SHOP;
 	}
 
-	//シーンへの遷移
-	//Tabキー押されたなら
-	if (IsKeyPush(KEY_INPUT_TAB))
-	{
-		m_SceneFlag = 1;
+	////シーンへの遷移
+	////Tabキー押されたなら
+	//if (IsKeyPush(KEY_INPUT_TAB))
+	//{
+	//	m_SceneFlag = 1;
 
-		//ショップ後処理へ移動
-		g_CurrentSceneID = SCENE_ID_FIN_SHOP;
-	}
+	//	//ショップ後処理へ移動
+	//	g_CurrentSceneID = SCENE_ID_FIN_SHOP;
+	//}
 
 }
 
@@ -48,6 +48,7 @@ void Shop::DrawShop()
 
 	//デバッグ
 	DrawFormatString(0, 0, GetColor(255, 255, 255), "ショップシーンです", true);
+	DrawFormatString(0, 100, GetColor(255, 255, 255), "ステージセレクトに戻るにはenterを押してください。", true);
 
 }
 
@@ -56,12 +57,13 @@ void Shop::FinShop()
 {
 	if (m_SceneFlag == 0)
 	{
-		
+		//ステージセレクトシーンINITへ移動
+		g_CurrentSceneID = SCENE_ID_INIT_STAGE_SELECT;
 	}
 
-	if (m_SceneFlag == 1)
+	/*if (m_SceneFlag == 1)
 	{
 		
-	}
+	}*/
 
 }

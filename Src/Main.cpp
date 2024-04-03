@@ -36,7 +36,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	if (DxLib_Init() == -1) {return -1;}
 
 	// 画面サイズを変更
-	SetGraphMode(WINDOW2_WIDTH, WINDOW2_HEIGHT, 32);
+	SetGraphMode(WINDOW_WIDTH, WINDOW_HEIGHT, 32);
 
 	//描画するスクリーンを設定する
 	SetDrawScreen(DX_SCREEN_BACK);
