@@ -4,26 +4,8 @@
 #include "../Collision/Collision.h"
 #include "../Player/player.h"
 
-<<<<<<< HEAD
-//Enemy::Enemy()
-//{
-//
-//}
-//
-//Enemy::~Enemy()
-//{
-//
-//}
-//
-//void Enemy::Init()
-//{
-//	handle = 0;
-//
-//
-//
-//}
-//
-=======
+//<<<<<<< HEAD
+
 Enemy::Enemy()
 {
 
@@ -37,13 +19,11 @@ Enemy::~Enemy()
 void Enemy::Init()
 {
 	handle = 0;
-	point = 0;
+
+
+
 }
 
-<<<<<<< Updated upstream
-=======
->>>>>>> 013ee3738470a81b1ba1ade8b80d07a30904121f
->>>>>>> Stashed changes
 //void Enemy::Draw()
 //{
 //
@@ -53,13 +33,38 @@ void Enemy::Init()
 //{
 //
 //}
-<<<<<<< Updated upstream
 
 //コメントアウトしているものは使うかわからないのでしてます//
-=======
-<<<<<<< HEAD
-=======
 
-//コメントアウトしているものは使うかわからないのでしてます//
->>>>>>> 013ee3738470a81b1ba1ade8b80d07a30904121f
->>>>>>> Stashed changes
+//=======
+//Enemy::Enemy()
+//{
+//
+//}
+//
+//Enemy::~Enemy()
+//{
+//
+//}
+//
+//void Enemy::Init()
+//{
+//	handle = 0;
+//	point = 0;
+//}
+//
+//<<<<<<< Updated upstream
+//=======
+//>>>>>>> 013ee3738470a81b1ba1ade8b80d07a30904121f
+//>>>>>>> Stashed changes
+
+//<<<<<<< Updated upstream
+
+
+//=======
+//<<<<<<< HEAD
+//=======
+//
+////コメントアウトしているものは使うかわからないのでしてます//
+//>>>>>>> 013ee3738470a81b1ba1ade8b80d07a30904121f
+//>>>>>>> Stashed changes
