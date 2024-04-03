@@ -11,9 +11,9 @@ class Enemy
 {
 public:
 
-	int handle = 0;				//画像ハンドル
-	int enemyHP = 0;			//敵のライフ
-	int enemyExperience = 0;	//敵の経験値
+	int handle = 0;		//画像ハンドル
+	int HP = 0;			//敵のライフ
+	int Experience = 0;	//敵の経験値
 	int point = 0;				//敵の得点
 	float Posx = 0.0f;			//X座標
 	float Posy = 0.0f;			//Y座標
@@ -22,13 +22,13 @@ public:
 	~Enemy();
 
 	//敵初期化
-	void InitEnemy();
+	void Init();
 
 	//敵の描画
-	void DrawEnemy();
+	void Draw();
 
 	//敵全滅チェック
-	bool IsAllKillEnemy();
+	bool IsAllKill();
 
 	
 

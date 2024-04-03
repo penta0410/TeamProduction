@@ -14,17 +14,20 @@ Enemy::~Enemy()
 
 }
 
-void Enemy::InitEnemy()
+void Enemy::Init()
+{
+	handle = 0;
+
+
+
+}
+
+void Enemy::Draw()
 {
 
 }
 
-void Enemy::DrawEnemy()
-{
-
-}
-
-bool Enemy::IsAllKillEnemy()
+bool Enemy::IsAllKill()
 {
 
 }
