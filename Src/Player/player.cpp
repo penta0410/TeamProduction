@@ -26,13 +26,13 @@ void Player::Init()
 	posX = WINDOW_WIDTH / 2;
 	posY = WINDOW_HEIGHT - (PLAYER_H / 2);
 
-	move_x			 = DEFAULT_MOVE_X;
-	HP			     = DEFAULT_HP;										
-	ATK				 = DEFAULT_ATK;
-	ATK_SPEED		 = DEFAULT_ATK_SPEED;
-	DEF			     = DEFAULT_DEF;
+	move_x			 = PLAYER_DEFAULT_MOVE_X;
+	HP			     = PLAYER_DEFAULT_HP;
+	ATK				 = PLAYER_DEFAULT_ATK;
+	ATK_SPEED		 = PLAYER_DEFAULT_ATK_SPEED;
+	DEF			     = PLAYER_DEFAULT_DEF;
 	EXPERIENCE_POINT = 0;
-	LEVEL		     = DEFAULT_LEVEL;
+	LEVEL		     = PLAYER_DEFAULT_LEVEL;
 
 }
 
@@ -65,4 +65,15 @@ bool Player::Input_LeftAndRight()
 {
 	if(Input_Left()&& Input_Right())
 		return true;
+}
+void Player::Level_Up()
+{
+	if (LEVEL < PLAYER_BEGINNER_LEVEL)
+	{
+		if (EXPERIENCE_POINT > level_border_line)
+		{
+			LEVEL++;
+			level_border_line += 5;
+		}
+	}
 }
