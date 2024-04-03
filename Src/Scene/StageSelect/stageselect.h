@@ -4,7 +4,10 @@
 
 const int STAGE_SELECT_IMAGE_NUMBER = 10; //ステージセレクト画像枚数
 
-#define STAGE_SELECT_BACK_IMAGE_PATH	"Data/StageSelectImage/StageSelectBackImage.png"	//ステージセレクト背景パス
+//ステージセレクト背景パス
+#define STAGE_SELECT_BACK_IMAGE_PATH	"Data/StageSelectImage/StageSelectBackImage.png"	
+//ステージセレクトタイトルパス
+#define STAGE_SELECT_TITLE_IMAGE_PATH	"Data/StageSelectImage/StageSelectTitleImage.png"	
 
 class StageSelect : public Title
 {

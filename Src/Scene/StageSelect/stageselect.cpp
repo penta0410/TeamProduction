@@ -12,6 +12,7 @@
 const char* STAGE_SELECT_IMAGE_PATH[STAGE_SELECT_IMAGE_NUMBER] =
 {
 	STAGE_SELECT_BACK_IMAGE_PATH,
+	STAGE_SELECT_TITLE_IMAGE_PATH,
 
 };
 
@@ -21,6 +22,9 @@ void StageSelect::InitStageSelect()
 	//シーンフラグ初期化
 	m_SceneFlag = 0;
 
+	m_imagehandle[0] = LoadGraph(STAGE_SELECT_IMAGE_PATH[0]);	//ステージセレクト背景画像
+	m_imagehandle[1] = LoadGraph(STAGE_SELECT_IMAGE_PATH[1]);	//ステージセレクトタイトル画像
+	
 	//ステージセレクトループへ
 	g_CurrentSceneID = SCENE_ID_LOOP_STAGE_SELECT;
 
@@ -68,9 +72,10 @@ void StageSelect::StepStageSelect()
 //ステージセレクト描画処理
 void StageSelect::DrawStageSelect()
 {
-	//ステージセレクト画面描画
-	DrawGraph(0, 0, m_imagehandle[0], true);
-
+	
+	DrawRotaGraph(645, 359, 1.01f, 0.0f, m_imagehandle[0], true); //ステージセレクト背景描画
+	DrawRotaGraph(200, 50, 0.25f, 0.0f, m_imagehandle[1], true);	//ステージセレクトタイトル描画
+	
 	//デバッグ
 	/*DrawFormatString(100, 100, GetColor(255, 255, 255), 
 		"ステージセレクトシーンです。", true);
