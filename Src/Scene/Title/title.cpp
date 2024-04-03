@@ -21,6 +21,9 @@ const char* TITLE_IMAGE_PATH[TITLE_IMAGE_NUMBER] =
 //タイトル初期化
 void Title::InitTitle()
 {
+	//シーンフラグ初期化
+	m_SceneFlag = 0;
+
 	m_imagehandle[0] = LoadGraph(TITLE_IMAGE_PATH[0]);		//スタートボタン画像
 	m_imagehandle[1] = LoadGraph(TITLE_IMAGE_PATH[1]);		//タイトル背景画像
 	m_imagehandle[2] = LoadGraph(TITLE_IMAGE_PATH[2]);		//タイトル名前画像

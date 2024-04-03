@@ -14,8 +14,8 @@ public:
 	float Posx = 0.0f;			//X座標
 	float Posy = 0.0f;			//Y座標
 		
-	Enemy();
-	~Enemy();
+	Enemy();					//コンストラクタ
+	~Enemy();					//デストラクタ
 
 	//敵初期化
 	void Init();
