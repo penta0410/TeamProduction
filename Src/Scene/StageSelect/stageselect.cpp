@@ -1,6 +1,8 @@
 #include "DxLib.h"
 #include "stageselect.h"
 #include "../../Input/Input.h"
+#include "../../Collision/Collision.h"
+#include "../Scene.h"
 
 //=============================
 // ステージセレクトシーン
@@ -63,14 +65,14 @@ void StageSelect::DrawStageSelect()
 	DrawGraph(0, 0, m_imagehandle[0], true);
 
 	//デバッグ
-	DrawFormatString(100, 100, GetColor(255, 255, 255), 
+	/*DrawFormatString(100, 100, GetColor(255, 255, 255), 
 		"ステージセレクトシーンです。", true);
 	DrawFormatString(100, 200, GetColor(255, 255, 255),
 		"プレイシーンへはenterを押してください。", true);
 	DrawFormatString(100, 300, GetColor(255, 255, 255),
 		"ショップシーンへはtabを押してください。", true);
 	DrawFormatString(100, 400, GetColor(255, 255, 255),
-		"タイトルシーンへは左ctrlを押してください。", true);
+		"タイトルシーンへは左ctrlを押してください。", true);*/
 
 }
 

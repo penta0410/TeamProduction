@@ -14,6 +14,7 @@ const char* TITLE_IMAGE_PATH[TITLE_IMAGE_NUMBER] =
 {
 	START_BOTTAN_IMAGE_PATH,
 	TITLE_IMAGE_BACK_PATH,
+	TITLE_IMAGE_NAME_PATH,
 
 };
 
@@ -22,6 +23,7 @@ void Title::InitTitle()
 {
 	m_imagehandle[0] = LoadGraph(TITLE_IMAGE_PATH[0]);		//スタートボタン画像
 	m_imagehandle[1] = LoadGraph(TITLE_IMAGE_PATH[1]);		//タイトル背景画像
+	m_imagehandle[2] = LoadGraph(TITLE_IMAGE_PATH[2]);		//タイトル名前画像
 
 	//タイトルループへ
 	g_CurrentSceneID = SCENE_ID_LOOP_TITLE;
@@ -61,12 +63,15 @@ void Title::StepTitle()
 void Title::DrawTitle()
 {
 	//タイトル背景描画
-	DrawRotaGraph(300, 300, 1.0f, 0.0f, m_imagehandle[1], true);
+	DrawRotaGraph(640, 360, 1.0f, 0.0f, m_imagehandle[1], true);
+
+	//タイトル名前描画
+	DrawRotaGraph(625, 280, 1.15f, 0.0f, m_imagehandle[2], true);
 
 	//スタートボタン描画
 	//点滅アニメーション(透過処理)
 	SetDrawBlendMode(DX_BLENDMODE_ALPHA, m_BottanAlpha);
-	DrawRotaGraph(645, 510, 0.4f, 0.0f, m_imagehandle[0], true);
+	DrawRotaGraph(645, 550, 0.4f, 0.0f, m_imagehandle[0], true);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, m_BottanAlpha);
 
 	//マウス処理
@@ -84,6 +89,12 @@ void Title::DrawTitle()
 //タイトル後処理
 void Title::FinTitle()
 {
+	//画像消去
+	for (int i = 0; i < TITLE_IMAGE_NUMBER; i++)
+	{
+		DeleteGraph(m_imagehandle[i]);
+	}
+
 	//ステージセレクトINITへ移動
 	if (m_SceneFlag == 0)
 	{

@@ -1,10 +1,10 @@
 #pragma once
 
-const int TITLE_IMAGE_NUMBER = 10;		//画像枚数
+const int TITLE_IMAGE_NUMBER = 3;		//画像枚数
 
 #define START_BOTTAN_IMAGE_PATH	"Data/TitleImage/StartBottanImage.png"		//スタートボタン画像パス
 #define TITLE_IMAGE_BACK_PATH	"Data/TitleImage/TitleBackGroundImage.png"		//タイトル背景画像パス
-
+#define TITLE_IMAGE_NAME_PATH	"Data/TitleImage/TitleImage.png"		//タイトル名前画像パス
 
 class Title
 {
@@ -23,7 +23,7 @@ protected:		//ほかのシーンでも使うもの
 private:	//タイトルシーンだけで使うもの
 
 	//ボタンアニメーション透過変数
-	int m_BottanAlpha = 100;
+	int m_BottanAlpha = 200;
 
 	//透過フラグ
 	bool m_BottanAlphaFlag = true;

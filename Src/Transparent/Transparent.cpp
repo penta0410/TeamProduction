@@ -26,7 +26,7 @@ int Transparent(int alpha)
 		alpha += ALPHA_SPEED;
 
 		//BottanAlpha‚ª100ˆÈã‚ÌŽžBottanAlphaFlag‚ðtrue‚É‚·‚é
-		if (alpha >= 100)
+		if (alpha >= 180)
 		{
 			Flag = true;
 		}
