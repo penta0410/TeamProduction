@@ -26,10 +26,14 @@ void Player::Init()
 	posX = WINDOW_WIDTH / 2;
 	posY = WINDOW_HEIGHT - (PLAYER_H / 2);
 
-	move_x = DEFAULT_MOVE_X;
-	HP     = DEFAULT_HP;										
-	ATK    = DEFAULT_ATK;										
-	DEF	   = DEFAULT_DEF;
+	move_x			 = DEFAULT_MOVE_X;
+	HP			     = DEFAULT_HP;										
+	ATK				 = DEFAULT_ATK;
+	ATK_SPEED		 = DEFAULT_ATK_SPEED;
+	DEF			     = DEFAULT_DEF;
+	EXPERIENCE_POINT = 0;
+	LEVEL		     = DEFAULT_LEVEL;
+
 }
 
 void Player::LoadPlayer()
