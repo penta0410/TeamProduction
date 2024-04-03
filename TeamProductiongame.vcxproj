@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Src\Collision\Collision.cpp" />
     <ClCompile Include="Src\Effect\Effect.cpp" />
+    <ClCompile Include="Src\Enemy\Boss.cpp" />
     <ClCompile Include="Src\Enemy\enemy.cpp" />
     <ClCompile Include="Src\FPS\fps.cpp" />
     <ClCompile Include="Src\Input\Input.cpp" />
@@ -41,6 +42,7 @@
     <ClInclude Include="Src\Collision\Collision.h" />
     <ClInclude Include="Src\Common.h" />
     <ClInclude Include="Src\Effect\Effect.h" />
+    <ClInclude Include="Src\Enemy\Boss.h" />
     <ClInclude Include="Src\Enemy\enemy.h" />
     <ClInclude Include="Src\FPS\fps.h" />
     <ClInclude Include="Src\Input\Input.h" />

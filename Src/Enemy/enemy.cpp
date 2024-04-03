@@ -17,17 +17,17 @@ Enemy::~Enemy()
 void Enemy::Init()
 {
 	handle = 0;
-
-
-
+	point = 0;
 }
 
-void Enemy::Draw()
-{
+//void Enemy::Draw()
+//{
+//
+//}
+//
+//bool Enemy::IsAllKill()
+//{
+//
+//}
 
-}
-
-bool Enemy::IsAllKill()
-{
-
-}
+//コメントアウトしているものは使うかわからないのでしてます//
