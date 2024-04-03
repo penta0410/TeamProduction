@@ -49,8 +49,6 @@ void Title::StepTitle()
 //タイトル描画処理
 void Title::DrawTitle()
 {
-	
-
 	//スタートボタン描画
 	//点滅アニメーション(透過処理)
 	SetDrawBlendMode(DX_BLENDMODE_ALPHA, m_BottanAlpha);
