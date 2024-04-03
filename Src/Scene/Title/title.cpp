@@ -9,9 +9,20 @@
 // タイトルシーン
 //=============================
 
+//タイトル画像パス
+const char* TITLE_IMAGE_PATH[TITLE_IMAGE_NUMBER] =
+{
+	START_BOTTAN_IMAGE_PATH,
+	TITLE_IMAGE_BACK_PATH,
+
+};
+
 //タイトル初期化
 void Title::InitTitle()
 {
+	m_imagehandle[0] = LoadGraph(TITLE_IMAGE_PATH[0]);		//スタートボタン画像
+	m_imagehandle[1] = LoadGraph(TITLE_IMAGE_PATH[1]);		//タイトル背景画像
+
 	//タイトルループへ
 	g_CurrentSceneID = SCENE_ID_LOOP_TITLE;
 
@@ -49,20 +60,24 @@ void Title::StepTitle()
 //タイトル描画処理
 void Title::DrawTitle()
 {
+	//タイトル背景描画
+	DrawRotaGraph(300, 300, 1.0f, 0.0f, m_imagehandle[1], true);
+
 	//スタートボタン描画
 	//点滅アニメーション(透過処理)
 	SetDrawBlendMode(DX_BLENDMODE_ALPHA, m_BottanAlpha);
-	DrawRotaGraph(645, 510, 0.15f, 0.0f, m_imagehandle[0], true);
+	DrawRotaGraph(645, 510, 0.4f, 0.0f, m_imagehandle[0], true);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, m_BottanAlpha);
 
 	//マウス処理
 	MouseClick();
 
+
 	//デバッグ
-	DrawFormatString(100, 100, GetColor(255, 255, 255),
+	/*DrawFormatString(100, 100, GetColor(255, 255, 255),
 		"タイトルシーンです", true);
 	DrawFormatString(100, 200, GetColor(255, 255, 255),
-		"ステージ選択シーンへはenterを押してください。", true);
+		"ステージ選択シーンへはenterを押してください。", true);*/
 
 }
 
@@ -79,10 +94,12 @@ void Title::FinTitle()
 	//{
 	//	/*g_CurrentSceneID = SCENE_ID_INIT_OPTION;*/
 	//}
+
 }
 
 void Title::MouseClick()
 {
+
 	//マウス位置取得
 	GetMousePoint(&m_Mouse_x, &m_Mouse_y);
 
