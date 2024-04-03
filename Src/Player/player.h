@@ -1,16 +1,17 @@
 ﻿#pragma once
 
 #define PLAYER_IMAGE_PATH "Data/PlayImage/majo.png"			//プレイヤー画像パス
-#define DEFAULT_MOVE_X	   10.0f							//プレイヤーのデフォルトの移動量
-#define DEFAULT_HP		   3								//プレイヤーのデフォルトの体力
-#define DEFAULT_ATK		   1								//プレイヤーのデフォルトの攻撃力
-#define DEFAULT_ATK		   1								//プレイヤーのデフォルトの攻撃力
-#define DEFAULT_ATK_SPEED  2								//プレイヤーのデフォルトの攻撃速度
-#define DEFAULT_DEF		   1								//プレイヤーのデフォルトの守備力
-#define DEFAULT_LEVEL	   1								//プレイヤーのデフォルトのレベル
-
-#define PLAYER_W		  150								//プレイヤーの横サイズ
-#define PLAYER_H		  220								//プレイヤーの縦サイズ
+#define PLAYER_DEFAULT_MOVE_X	   10.0f							//プレイヤーのデフォルトの移動量
+#define PLAYER_DEFAULT_HP		   3								//プレイヤーのデフォルトの体力
+#define PLAYER_DEFAULT_ATK		   1								//プレイヤーのデフォルトの攻撃力
+#define PLAYER_DEFAULT_ATK_SPEED   2								//プレイヤーのデフォルトの攻撃速度
+#define PLAYER_DEFAULT_DEF		   1								//プレイヤーのデフォルトの守備力
+#define PLAYER_DEFAULT_LEVEL	   1								//プレイヤーのデフォルトのレベル
+#define PLAYER_BEGINNER_LEVEL	   20								//プレイヤーのビギナーレベル
+#define PLAYER_MAX_LEVEL		   100								//プレイヤーのマックスレベル
+#define PLAYER_W				   150								//プレイヤーの横サイズ
+#define PLAYER_H				   220								//プレイヤーの縦サイズ
+#define LEVEL_DEFAULT_BORDER_LINE  5								//プレイヤーのデフォルトのレベル境界線
 
 class Player
 {
@@ -29,7 +30,7 @@ private:
 	int ATK = 0;											//プレイヤーの攻撃力
 	int ATK_SPEED = 0;										//プレイヤーの攻撃速度
 	int DEF = 0;											//プレイヤーの守備力
-	
+	int level_border_line = 5;								//レベルの境界線
 
 public:
 
@@ -49,5 +50,6 @@ public:
 	bool Input_Right();
 															//AキーとDキーまたは←キーと→キーを同時に押しているか
 	bool Input_LeftAndRight();
-
+															//プレイヤーのレベル処理
+	void Level_Up();
 };
