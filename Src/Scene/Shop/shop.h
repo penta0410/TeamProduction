@@ -3,7 +3,7 @@
 
 const int SHOP_IMAGE_NUMBER = 10;	//ƒVƒ‡ƒbƒv‰æ‘œ–‡”
 
-class SHOP : public Title
+class Shop : public Title
 {
 
 private:

@@ -8,14 +8,14 @@
 //=============================
 
 //ショップ初期化
-void SHOP::InitShop()
+void Shop::InitShop()
 {
 	//ショップループへ
 	g_CurrentSceneID = SCENE_ID_LOOP_SHOP;
 }
 
 //ショップ通常処理
-void SHOP::StepShop()
+void Shop::StepShop()
 {
 
 	//シーンへの遷移
@@ -41,18 +41,18 @@ void SHOP::StepShop()
 }
 
 //ショップ描画処理
-void SHOP::DrawShop()
+void Shop::DrawShop()
 {
 	//ショップ背景	
 	DrawRotaGraph(640, 360, 1.0f, 0.0f, m_imagehandle[0], true);
 
 	//デバッグ
-	DrawFormatString(0, 0, GetColor(0, 0, 0), "ショップシーンです", true);
+	DrawFormatString(0, 0, GetColor(255, 255, 255), "ショップシーンです", true);
 
 }
 
 //ショップ後処理
-void SHOP::FinShop()
+void Shop::FinShop()
 {
 	if (m_SceneFlag == 0)
 	{

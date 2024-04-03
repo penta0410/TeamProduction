@@ -53,9 +53,9 @@ void Play::StepPlay()
 void Play::DrawPlay()
 {
 	//デバッグ
-	DrawFormatString(100, 100, GetColor(0, 0, 0), "プレイシーンです", true);
-	DrawFormatString(100, 200, GetColor(0, 0, 0), "クリアシーンへはenter", true);
-	DrawFormatString(100, 300, GetColor(0, 0, 0), "ゲームオーバーシーンへはtab", true);
+	DrawFormatString(100, 100, GetColor(255, 255, 255), "プレイシーンです", true);
+	DrawFormatString(100, 200, GetColor(255, 255, 255), "クリアシーンへはenter", true);
+	DrawFormatString(100, 300, GetColor(255, 255, 255), "ゲームオーバーシーンへはtab", true);
 
 }
 

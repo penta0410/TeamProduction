@@ -4,7 +4,7 @@
 
 const int STAGE_SELECT_IMAGE_NUMBER = 10; //ステージセレクト画像枚数
 
-class Stage_Select : public Title
+class StageSelect : public Title
 {
 private:
 

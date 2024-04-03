@@ -61,7 +61,10 @@ void Title::DrawTitle()
 	MouseClick();
 
 	//デバッグ
-	DrawFormatString(100, 100, GetColor(0, 0, 0), "タイトルシーンです", true);
+	DrawFormatString(100, 100, GetColor(255, 255, 255),
+		"タイトルシーンです", true);
+	DrawFormatString(100, 200, GetColor(255, 255, 255),
+		"ステージ選択シーンへはenterを押してください。", true);
 
 }
 

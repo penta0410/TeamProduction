@@ -35,9 +35,9 @@ void Clear::DrawClear()
 
 
 	//デバッグ
-	DrawFormatString(100, 100, GetColor(0, 0, 0),
+	DrawFormatString(100, 100, GetColor(255, 255, 255),
 		"クリアシーンです", true);
-	DrawFormatString(100, 200, GetColor(0, 0, 0),
+	DrawFormatString(100, 200, GetColor(255, 255, 255),
 		"ステージセレクトへはenterを押してください", true);
 
 }
