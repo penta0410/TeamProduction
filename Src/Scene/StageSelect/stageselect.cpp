@@ -8,14 +8,21 @@
 // ステージセレクトシーン
 //=============================
 
+//ステージセレクト画像パス
+const char* STAGE_SELECT_IMAGE_PATH[STAGE_SELECT_IMAGE_NUMBER] =
+{
+	STAGE_SELECT_BACK_IMAGE_PATH,
+
+};
+
 //ステージセレクト初期化
 void StageSelect::InitStageSelect()
 {
+	//シーンフラグ初期化
+	m_SceneFlag = 0;
+
 	//ステージセレクトループへ
 	g_CurrentSceneID = SCENE_ID_LOOP_STAGE_SELECT;
-
-	//ステージセレクトシーンフラグ
-	m_SceneFlag = 0;
 
 }
 
