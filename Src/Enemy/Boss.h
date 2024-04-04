@@ -11,16 +11,21 @@
 
 class Boss:public Enemy
 {
-public:
+private:
 
+	//敵情報
 	int Boss_handle = 0;			//ボス画像ハンドル
 	int Boss_experience = 0;		//ボスの経験値
 	int Boss_point = 0;				//ボスの得点
 	int Boss_HP = 0;				//ボスの体力
 	int Boss_ATK = 0;				//ボスの攻撃力
+
 	float BossX = 0.0f;				//ボスのX座標
 	float BossY = 0.0f;				//ボスのY座標
+
 	bool  Boss_is_alive;			//ボス生存フラグ
+
+public:
 
 	Boss();							//コンストラクタ
 	~Boss();						//デストラクタ
@@ -28,13 +33,17 @@ public:
 	//ボス初期化
 	void InitBoss();
 
+	//ボス読み込み
+	void LoadBoss();
+
 	//ボス描画
 	void DrawBoss();
 
 	//ボス攻撃
 	void ATKBoss();
 
-	//ボス全滅チェック
-	/*bool KillBoss();*/
+	//ボス後処理
+	void FinBoss();
+
 
 };

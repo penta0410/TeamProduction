@@ -1,31 +1,48 @@
 #include "DxLib.h"
 #include "enemy.h"
+#include "Boss.h"
 #include "../Scene/Scene.h"
 #include "../Collision/Collision.h"
 #include "../Player/player.h"
 
-<<<<<<< HEAD
+//«ŽÀs‚·‚é‚Æ‚«ƒRƒƒ“ƒgƒAƒEƒg‚µ‚Ä‚­‚¾‚³‚¢
+<<<<<<< HEAD				
 
-Enemy::Enemy()
+
+Enemy::Enemy(){}			//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+Enemy::~Enemy(){}			//ƒfƒXƒgƒ‰ƒNƒ^
+
+void Enemy::InitEnemy()		//“G‰Šú‰»
+{
+	//“G‰Šú‰»î•ñ
+	handle = 0;							//“G‰æ‘œƒnƒ“ƒhƒ‹
+	Experience = ENEMY_EXPERIENCE;		//“GŒoŒ±’l
+	point = ENEMY_POINT;				//“G“¾“_
+	EnemyATK = ENEMY_ATK;				//“GUŒ‚—Í
+	Enemy_is_alive = true;				//“G¶‘¶ƒtƒ‰ƒO
+
+}
+
+void Enemy::LoadEnemy()		//“G“Ç‚Ýž‚Ý
+{
+	//handle=LoadGraph(ENEMY_PATH)		
+}
+
+void Enemy::DrawEnemy()		//“G•`‰æ
+{
+	//DrawRotaGraph()
+}
+
+void Enemy::ATKEnemy()		//“GUŒ‚
 {
 
 }
 
-Enemy::~Enemy()
+void Enemy::FinEnemy()		//“GŒãˆ—
 {
 
 }
 
-void Enemy::Init()
-{
-	handle = 0;
-
-
-
-}
-
-//void Enemy::Draw()
-//{
 =======
 ////Enemy::Enemy()
 ////{
