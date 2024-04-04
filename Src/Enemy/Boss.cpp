@@ -4,7 +4,8 @@
 #include "../Collision/Collision.h"
 #include "../Player/player.h"
 
-Boss::~Boss(){}		//デストラクタ
+//Boss::Boss(){}		//コンストラクタ
+//Boss::~Boss(){}		//デストラクタ
 
 
 void Boss::InitBoss()						//プレイ初期化
