@@ -35,6 +35,15 @@ const int STAGE_NUM = 3;		//ステージ数
 #define ENTER_BOTTAN_IMAGE_PATH		"Data/StageSelectImage/EnterKeyBottanImage.png"
 //左クリックボタンパス
 #define LEFT_CLICK_BOTTAN_IMAGE_PATH	"Data/StageSelectImage/LeftClickBottanImage.png"
+//タイトルに戻るボタンパス
+#define RETURN_TITLE_BOTTAN_PATH		"Data/StageSelectImage/returntitleBottan.png"
+//オプションボタンパス
+#define OPITON_BOTTAN_PATH				"Data/StageSelectImage/OptionBottanImage.png" 
+
+//ステージ選択フレームパス
+#define STAGE_FLAME_PATH		"Data/StageSelectImage/Flame.png"
+//メニューボタンフレームパス
+#define BOTTAN_FLAME_PATH		"Data/StageSelectImage/MenuBottanFlame.png"
 
 class StageSelect : public Title
 {
@@ -43,10 +52,16 @@ private:
 	//ステージアイコン座標
 	int m_StageIcon_x[STAGE_NUM] = { 0 };
 	int m_StageIcon_y[STAGE_NUM] = { 0 };
-
-	int m_Menu_Bottan_Flame = 0;		//メニューボタンフレーム
-	bool m_Menu_Flag = false;	//メニューフラグ
+	int m_StageFlag = 0;			//ステージフラグ
+	int m_MenuBottanFlame = 0;		//メニューボタンフレーム
+	bool m_MenuFlag = false;	//メニューフラグ
 	
+	int m_MenuBottanFlag = 0;		//メニューボタンのフラグ
+
+	//メニューボタンフレーム座標
+	int m_MenuBottanFlame_x = 0;		
+	int m_MenuBottanFlame_y = 0;
+
 public:
 
 	//ステージセレクト初期化
