@@ -13,9 +13,6 @@ const char* STAGE_SELECT_IMAGE_PATH[STAGE_SELECT_IMAGE_NUMBER] =
 {
 	STAGE_SELECT_BACK_IMAGE_PATH,		//ステージ背景
 	STAGE_SELECT_TITLE_IMAGE_PATH,		//ステージセレクト見出し
-	STAGE_RETURN_BOTTAN_IMAGE_PATH,		//戻るボタン
-	STAGE_SHOP_BOTTAN_IMAGE_PATH,		//ショップボタン
-    STAGE_SELECT_MENU_BOTTAN_IMAGE_PATH		//メニューボタン
 	STAGE_ICON_IMAGE_PATH,					//ステージアイコン
 
 };
@@ -23,11 +20,31 @@ const char* STAGE_SELECT_IMAGE_PATH[STAGE_SELECT_IMAGE_NUMBER] =
 //ボタン画像パス
 const char* BOTTAN_IMAGE_PATH[BOTTAN_IMAGE_NUMBER] =
 {
+	STAGE_RETURN_BOTTAN_IMAGE_PATH,		//戻るボタン
+	STAGE_SHOP_BOTTAN_IMAGE_PATH,		//ショップボタン
+	STAGE_SELECT_MENU_BOTTAN_IMAGE_PATH,		//メニューボタン
 	TAB_BOTTAN_IMAGE_PATH,		//タブボタン
 	ENTER_BOTTAN_IMAGE_PATH,	//エンターボタン
 	LEFT_CLICK_BOTTAN_IMAGE_PATH,	//左クリックボタン
 
 };
+
+//コンストラクタ
+StageSelect::StageSelect()
+{
+	//ステージアイコン
+	//x座標
+	m_StageIcon_x[0] = 300;
+	m_StageIcon_x[1] = 400;
+	m_StageIcon_x[2] = 500;
+	
+	//y座標
+	m_StageIcon_y[0] = 350;
+	m_StageIcon_y[1] = 450;
+	m_StageIcon_y[2] = 350;
+
+}
+
 
 //ステージセレクト初期化
 void StageSelect::InitStageSelect()
@@ -37,12 +54,12 @@ void StageSelect::InitStageSelect()
 
 	m_imagehandle[0] = LoadGraph(STAGE_SELECT_IMAGE_PATH[0]);	//ステージセレクト背景画像
 	m_imagehandle[1] = LoadGraph(STAGE_SELECT_IMAGE_PATH[1]);	//ステージセレクトタイトル画像
-	m_imagehandle[2] = LoadGraph(STAGE_SELECT_IMAGE_PATH[2]);	//戻るボタン画像
-	m_imagehandle[3] = LoadGraph(STAGE_SELECT_IMAGE_PATH[3]);	//ショップボタン画像
-	m_imagehandle[4] = LoadGraph(STAGE_SELECT_IMAGE_PATH[4]);	//メニューボタン画像
-	m_imagehandle[5] = LoadGraph(BOTTAN_IMAGE_PATH[0]);			//タブボタン画像
-	m_imagehandle[6] = LoadGraph(BOTTAN_IMAGE_PATH[1]);			//エンターボタン画像
-	m_imagehandle[7] = LoadGraph(STAGE_SELECT_IMAGE_PATH[5]);	//ステージアイコン画像
+	m_imagehandle[2] = LoadGraph(BOTTAN_IMAGE_PATH[0]);			//戻るボタン画像
+	m_imagehandle[3] = LoadGraph(BOTTAN_IMAGE_PATH[1]);			//ショップボタン画像
+	m_imagehandle[4] = LoadGraph(BOTTAN_IMAGE_PATH[2]);			//メニューボタン画像
+	m_imagehandle[5] = LoadGraph(BOTTAN_IMAGE_PATH[3]);			//タブボタン画像
+	m_imagehandle[6] = LoadGraph(BOTTAN_IMAGE_PATH[4]);			//エンターボタン画像
+	m_imagehandle[7] = LoadGraph(STAGE_SELECT_IMAGE_PATH[2]);	//ステージアイコン画像
  	
 	//ステージセレクトループへ
 	g_CurrentSceneID = SCENE_ID_LOOP_STAGE_SELECT;
@@ -91,7 +108,7 @@ void StageSelect::DrawStageSelect()
 	DrawRotaGraph(200, 50, 0.25f, 0.0f, m_imagehandle[1], true);	//ステージセレクトタイトル描画
 	
 	DrawRotaGraph(1210, 680, 1.1f, 0.0f, m_imagehandle[4], true);	//メニューボタン描画
-	DrawRotaGraph(1240, 705, 0.07f, 0.0f, m_imagehandle[5], true);	//タブボタン描画
+	DrawRotaGraph(1240, 710, 0.07f, 0.0f, m_imagehandle[5], true);	//タブボタン描画
 	
 	DrawRotaGraph(300, 300, 0.8f, 0.0f, m_imagehandle[7], true);	//ステージアイコン描画
 	

@@ -4,7 +4,9 @@
 
 const int STAGE_SELECT_IMAGE_NUMBER = 10; //ステージセレクト画像枚数
 
-const int BOTTAN_IMAGE_NUMBER = 5;		//ボタン画像枚数
+const int BOTTAN_IMAGE_NUMBER = 10;		//ボタン画像枚数
+
+const int STAGE_NUM = 3;		//ステージ数
 
 //ステージセレクト背景パス
 #define STAGE_SELECT_BACK_IMAGE_PATH	"Data/StageSelectImage/StageSelectBackImage.png"	
@@ -29,10 +31,15 @@ const int BOTTAN_IMAGE_NUMBER = 5;		//ボタン画像枚数
 class StageSelect : public Title
 {
 private:
-
 	
+	//ステージアイコン座標
+	int m_StageIcon_x[STAGE_NUM] = { 0 };
+	int m_StageIcon_y[STAGE_NUM] = { 0 };
 
 public:
+
+	StageSelect();		//コンストラクタ
+	~StageSelect();		//デストラクタ
 
 	//ステージセレクト初期化
 	void InitStageSelect();
