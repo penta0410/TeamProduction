@@ -31,7 +31,10 @@ void Boss::DrawBoss()						//ボス描画
 
 void Boss::ATKBoss()						//ボス攻撃
 {
-	
+	/*for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
+	{
+
+	}*/
 }
 
 void Boss::FinBoss()						//ボス後処理

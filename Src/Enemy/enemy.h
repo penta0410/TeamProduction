@@ -12,7 +12,6 @@
 #define ENEMY_BULLET_SPD      (2)		//“G’eƒXƒs[ƒh
 #define ENEMY_BULLET_INTERVAL (40)		//“G’e”­ËŠÔŠu
 
-
 class Enemy
 {
 protected:
@@ -40,14 +39,24 @@ public:
 	//“G“Ç‚İ‚İ
 	void LoadEnemy();
 
+	////“G’e“Ç‚İ‚İ
+	//void LoadEnemyBullet();
+
 	//“GUŒ‚
 	void ATKEnemy();
+
+	////’eˆÚ“®ˆ—
+	//void MoveBullet();
 
 	//“G‚Ì•`‰æ
 	void DrawEnemy();
 
+	//“G’e•`‰æ
+	void DrawEnemyBullet();
+
 	//“G‚ÌŒãˆ—
 	void FinEnemy();
+
 
 	//“G‘S–Åƒ`ƒFƒbƒN
 	//bool IsAllKillEnemy();
