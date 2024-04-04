@@ -2,7 +2,7 @@
 #include "../../Scene/Scene.h"
 #include "../../Scene/Title/title.h"
 
-const int STAGE_SELECT_IMAGE_NUMBER = 10; //ステージセレクト画像枚数
+const int STAGE_SELECT_IMAGE_NUMBER = 20; //ステージセレクト画像枚数
 
 const int BOTTAN_IMAGE_NUMBER = 10;		//ボタン画像枚数
 
@@ -20,6 +20,14 @@ const int STAGE_NUM = 3;		//ステージ数
 #define STAGE_SELECT_MENU_BOTTAN_IMAGE_PATH		"Data/StageSelectImage/MenuBottanImage.png"
 //ステージアイコンパス
 #define STAGE_ICON_IMAGE_PATH		"Data/StageSelectImage/StageIconImage.png"
+//ステージ１パス
+#define STAGE1_PATH		"Data/StageSelectImage/STAGE1.png"
+//ステージ2パス
+#define STAGE2_PATH		"Data/StageSelectImage/STAGE2.png"
+//ステージ3パス
+#define STAGE3_PATH		"Data/StageSelectImage/STAGE3.png"
+//フレームパス
+#define Flame_PATH		"Data/StageSelectImage/Flame.png"
 
 //タブボタンパス
 #define TAB_BOTTAN_IMAGE_PATH		"Data/StageSelectImage/TabkeyBottanImage.png"
@@ -36,10 +44,10 @@ private:
 	int m_StageIcon_x[STAGE_NUM] = { 0 };
 	int m_StageIcon_y[STAGE_NUM] = { 0 };
 
+	int m_Menu_Bottan_Flame = 0;		//メニューボタンフレーム
+	bool m_Menu_Flag = false;	//メニューフラグ
+	
 public:
-
-	StageSelect();		//コンストラクタ
-	~StageSelect();		//デストラクタ
 
 	//ステージセレクト初期化
 	void InitStageSelect();
@@ -52,4 +60,16 @@ public:
 
 	//ステージセレクト後処理
 	void FinStageSelect();
+
+	//ステージアイコン選択処理
+	void StageIconSelect();
+
+	//メニュー処理
+	void Menu();
+	
+	//ボタンが押せるかどうか
+	//引数１ 　ボタン間隔指定
+	//引数２	フレーム変数指定
+	bool IsBottanFlag(int sconds, int Flame);
+
 };
