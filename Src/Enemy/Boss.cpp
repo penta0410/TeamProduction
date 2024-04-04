@@ -1,6 +1,5 @@
 #include "DxLib.h"
 #include "Boss.h"
-#include "enemy.h"
 #include "../Scene/Scene.h"
 #include "../Collision/Collision.h"
 #include "../Player/player.h"
