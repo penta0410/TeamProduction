@@ -69,7 +69,7 @@ void Title::DrawTitle()
 	DrawRotaGraph(640, 360, 1.0f, 0.0f, m_imagehandle[1], true);
 
 	//タイトル名前描画
-	DrawRotaGraph(625, 280, 1.15f, 0.0f, m_imagehandle[2], true);
+	DrawRotaGraph(625, 280, 0.3f, 0.0f, m_imagehandle[2], true);
 
 	//スタートボタン描画
 	//点滅アニメーション(透過処理)

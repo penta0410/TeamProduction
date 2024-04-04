@@ -1,6 +1,6 @@
 #pragma once
 
-const int TITLE_IMAGE_NUMBER = 3;		//画像枚数
+const int TITLE_IMAGE_NUMBER = 20;		//画像枚数
 
 #define START_BOTTAN_IMAGE_PATH	"Data/TitleImage/StartBottanImage.png"		//スタートボタン画像パス
 #define TITLE_IMAGE_BACK_PATH	"Data/TitleImage/TitleBackGroundImage.png"		//タイトル背景画像パス

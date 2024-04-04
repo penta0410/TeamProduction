@@ -5,8 +5,11 @@
 #include "../Collision/Collision.h"
 #include "../Player/player.h"
 
+<<<<<<< Updated upstream
 //↓実行するときコメントアウトしてください
 <<<<<<< HEAD				
+=======
+>>>>>>> Stashed changes
 
 
 Enemy::Enemy(){}			//コンストラクタ
@@ -43,7 +46,20 @@ void Enemy::FinEnemy()		//敵後処理
 
 }
 
+<<<<<<< Updated upstream
 =======
+=======
+void Enemy::Init()
+{
+	handle = 0;
+
+
+
+}
+
+//void Enemy::Draw()
+//{
+>>>>>>> Stashed changes
 ////Enemy::Enemy()
 ////{
 ////
@@ -62,7 +78,6 @@ void Enemy::FinEnemy()		//敵後処理
 ////
 ////}
 ////
-=======
 //Enemy::Enemy()
 //{
 //
@@ -79,10 +94,7 @@ void Enemy::FinEnemy()		//敵後処理
 //	point = 0;
 //}
 //
-<<<<<<< Updated upstream
-=======
->>>>>>> 013ee3738470a81b1ba1ade8b80d07a30904121f
->>>>>>> Stashed changes
+
 ////void Enemy::Draw()
 ////{
 ////
@@ -92,11 +104,8 @@ void Enemy::FinEnemy()		//敵後処理
 ////{
 ////
 ////}
-<<<<<<< Updated upstream
->>>>>>> fec13275ec03b2afa9f01ca8c49686a91d24406c
+
 //
 ////コメントアウトしているものは使うかわからないのでしてます//
-=======
-<<<<<<< HEAD
-=======
+
 
