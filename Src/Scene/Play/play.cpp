@@ -100,6 +100,11 @@ void Play::DrawPlay()
 //プレイ後処理
 void Play::FinPlay()
 {
+	//画像消去
+	for (int i = 0; i < PLAY_IMAGE_NUMBER; i++)
+	{
+		DeleteGraph(m_imagehandle[i]);
+	}
 
 	//クリアシーンへ
 	if (m_SceneFlag == 0)

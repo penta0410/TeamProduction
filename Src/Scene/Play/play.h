@@ -1,7 +1,7 @@
 #pragma once
 #include "../Title/title.h"
 
-const int PLAY_IMAGE_NUMBER = 10;	//画像枚数
+const int PLAY_IMAGE_NUMBER = 3;	//画像枚数
 
 #define PLAY_BACK_PATH		"Data/PlayImage/haikei.png"		//プレイシーン背景パス
 //背景座標

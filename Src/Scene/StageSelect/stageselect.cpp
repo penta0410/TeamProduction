@@ -34,9 +34,8 @@ const char* BOTTAN_IMAGE_PATH[BOTTAN_IMAGE_NUMBER] =
 	OPITON_BOTTAN_PATH,				//オプションボタン
 	BOTTAN_FLAME_PATH,		//メニューボタンフレーム
 	STAGE_FLAME_PATH,		//ステージ選択フレーム
+
 };
-
-
 
 //ステージセレクト初期化
 void StageSelect::InitStageSelect()
@@ -88,73 +87,7 @@ void StageSelect::InitStageSelect()
 //ステージセレクト通常処理
 void StageSelect::StepStageSelect()
 {
-	//メニュー画面へ
-	//ボタンが押せるかどうか
-	//tabキー押されたなら
-	if (IsBottanFlag(30, m_MenuBottanFlame))
-	{
-		if (IsKeyPush(KEY_INPUT_TAB) == 1 && m_MenuFlag == false)
-		{
-			m_MenuFlag = true;		//メニューフラグをonに
-			//メニューを開いた際に初期化
-			m_MenuBottanFlag = 1;		//メニューボタンのフラグ
-			m_SceneFlag = 1;		//シーンフラグをショップシーンに
-			//メニューボタンフレーム座標
-			m_MenuBottanFlame_x = 300;
-			m_MenuBottanFlame_y = 300;
-		}
-		else if (IsKeyPush(KEY_INPUT_TAB) == 1 && m_MenuFlag == true)
-		{
-			//メニューボタンフレーム座標を初期化
-			m_MenuBottanFlame_x = 302;
-			m_MenuBottanFlame_y = 324;
-			m_StageFlag = 1;		//ステージフラグを初期化
-			m_SceneFlag = 0;		//シーンフラグをプレイシーンに
-			m_MenuFlag = false;		//メニューフラグをoffに
-		}
-	}
-
-	//ステージ選択横移動処理
-	//左
-	//シーンがプレイの時
-	if (m_SceneFlag == 0)
-	{
-		if (IsKeyPush(KEY_INPUT_A) == 1)
-		{
-			//ステージ２を選択しているときボタン１に
-			if (m_StageFlag == 2)
-			{
-				m_MenuBottanFlame_x -= 200;
-				m_MenuBottanFlame_y -= 200;
-				m_StageFlag = 1;
-			}
-			//ステージ３を選択しているときにボタン２に
-			if (m_StageFlag == 3)
-			{
-				m_MenuBottanFlame_x -= 200;
-				m_MenuBottanFlame_y += 200;
-				m_StageFlag = 2;
-			}
-		}
-		//右
-		if (IsKeyPush(KEY_INPUT_D) == 1)
-		{
-			//ステージ２を選択しているときボタン３に
-			if (m_StageFlag == 2)
-			{
-				m_MenuBottanFlame_x += 200;
-				m_MenuBottanFlame_y -= 200;
-				m_StageFlag = 3;
-			}
-			//ステージ１を選択しているときボタン２に
-			if (m_StageFlag == 1)
-			{
-				m_MenuBottanFlame_x += 200;
-				m_MenuBottanFlame_y += 200;
-				m_StageFlag = 2;
-			}
-		}
-	}
+	StageIconSelect();		//ステージ選択処理
 
 	//シーン遷移処理
 	if (m_SceneFlag == 0)
@@ -235,7 +168,73 @@ void StageSelect::FinStageSelect()
 //ステージアイコン選択処理
 void StageSelect::StageIconSelect()
 {
+	//メニュー画面へ
+	//ボタンが押せるかどうか
+	//tabキー押されたなら
+	if (IsBottanFlag(30, m_MenuBottanFlame))
+	{
+		if (IsKeyPush(KEY_INPUT_TAB) == 1 && m_MenuFlag == false)
+		{
+			m_MenuFlag = true;		//メニューフラグをonに
+			//メニューを開いた際に初期化
+			m_MenuBottanFlag = 1;		//メニューボタンのフラグ
+			m_SceneFlag = 1;		//シーンフラグをショップシーンに
+			//メニューボタンフレーム座標
+			m_MenuBottanFlame_x = 300;
+			m_MenuBottanFlame_y = 300;
+		}
+		else if (IsKeyPush(KEY_INPUT_TAB) == 1 && m_MenuFlag == true)
+		{
+			//メニューボタンフレーム座標を初期化
+			m_MenuBottanFlame_x = 302;
+			m_MenuBottanFlame_y = 324;
+			m_StageFlag = 1;		//ステージフラグを初期化
+			m_SceneFlag = 0;		//シーンフラグをプレイシーンに
+			m_MenuFlag = false;		//メニューフラグをoffに
+		}
+	}
 
+	//ステージ選択横移動処理
+	//左
+	//シーンがプレイの時
+	if (m_SceneFlag == 0)
+	{
+		if (IsKeyPush(KEY_INPUT_A) == 1)
+		{
+			//ステージ２を選択しているときボタン１に
+			if (m_StageFlag == 2)
+			{
+				m_MenuBottanFlame_x -= 200;
+				m_MenuBottanFlame_y -= 200;
+				m_StageFlag = 1;
+			}
+			//ステージ３を選択しているときにボタン２に
+			if (m_StageFlag == 3)
+			{
+				m_MenuBottanFlame_x -= 200;
+				m_MenuBottanFlame_y += 200;
+				m_StageFlag = 2;
+			}
+		}
+		//右
+		if (IsKeyPush(KEY_INPUT_D) == 1)
+		{
+			//ステージ２を選択しているときボタン３に
+			if (m_StageFlag == 2)
+			{
+				m_MenuBottanFlame_x += 200;
+				m_MenuBottanFlame_y -= 200;
+				m_StageFlag = 3;
+			}
+			//ステージ１を選択しているときボタン２に
+			if (m_StageFlag == 1)
+			{
+				m_MenuBottanFlame_x += 200;
+				m_MenuBottanFlame_y += 200;
+				m_StageFlag = 2;
+			}
+		}
+	}
 }
 
 //メニュー処理

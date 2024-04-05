@@ -10,7 +10,6 @@
 #include "Input/Input.h"
 #include "Common.h"
 #include "FPS/fps.h"
-#include "Scene/StageSelect/stageselect.h"
 
 //フレームレート情報変数
 FrameRateInfo frameRateInfo;

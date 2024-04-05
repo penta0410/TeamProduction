@@ -1,5 +1,6 @@
 #pragma once
 #include "../Title/title.h"
+#include "../../Player/player.h"
 
 const int SHOP_IMAGE_NUMBER = 20;	//ショップ画像枚数
 
@@ -11,6 +12,13 @@ class Shop : public Title
 {
 
 private:
+
+	Player m_player;	//プレイヤークラス宣言
+
+	int PlayerHp = 0;
+	int PlayerAttackPower = 0;
+	int PlayerAttackInterval = 0;
+	int ScoreUp = 0;
 
 
 public:
