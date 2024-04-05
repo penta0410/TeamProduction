@@ -4,11 +4,17 @@
 const int PLAY_IMAGE_NUMBER = 10;	//画像枚数
 
 #define PLAY_BACK_PATH		"Data/PlayImage/haikei.png"		//プレイシーン背景パス
+//背景座標
+const int BACK_X = 640;		
+const int BACK_Y = 360;
+//スクロール速度
+const int BACK_SPEED = 4;
 
 class Play : public Title
 {
 private:
 
+	int m_scrollFlame = 0;		//スクロールフレーム
 	
 
 public:
@@ -27,5 +33,7 @@ public:
 
 	//プレイ後処理
 	void FinPlay();
+
+	
 
 };

@@ -20,6 +20,10 @@ protected:		//ほかのシーンでも使うもの
 	int m_Back_x = 0;	//x座標
 	int m_Back_y = 0;	//y座標
 
+	//スクロール用
+	int m_Back_x_2 = 0;	//x座標
+	int m_Back_y_2 = 0;	//y座標
+
 	//背景画像ハンドル
 	int m_imagehandle[TITLE_IMAGE_NUMBER] = { 0 };
 
