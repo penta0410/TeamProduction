@@ -5,6 +5,8 @@
 #include "../../Collision/Collision.h"
 #include "../../Input/Input.h"
 #include "../../Common.h"
+#include "../Play/play.h"
+#include "../../Screen/Screen.h"
 
 //=============================
 // プレイシーン
@@ -13,9 +15,19 @@
 Play::Play() {}		//コンストラクタ
 Play::~Play() {}	//デストラクタ
 
+//プレイシーン画像パス
+const char* PLAY_IMAGE_PATH[PLAY_IMAGE_NUMBER] =
+{
+	PLAY_BACK_PATH,		//プレイ背景パス
+
+
+};
+
 //プレイ初期化  
 void Play::InitPlay()
 {
+	m_imagehandle[0] = LoadGraph(PLAY_IMAGE_PATH[0]);	//プレイ背景画像
+
 	//プレイループへ
 	g_CurrentSceneID = SCENE_ID_LOOP_PLAY;
 }
@@ -52,16 +64,14 @@ void Play::StepPlay()
 //プレイ描画処理
 void Play::DrawPlay()
 {
-	//デバッグ
-	DrawFormatString(100, 100, GetColor(255, 255, 255), "プレイシーンです", true);
-	DrawFormatString(100, 200, GetColor(255, 255, 255), "クリアシーンへはenter", true);
-	DrawFormatString(100, 300, GetColor(255, 255, 255), "ゲームオーバーシーンへはtab", true);
+	DrawRotaGraph(645, 359, 1.01f, 0.0f, m_imagehandle[0], true); //プレイ背景描画
 
 }
 
 //プレイ後処理
 void Play::FinPlay()
 {
+
 	//クリアシーンへ
 	if (m_SceneFlag == 0)
 	{

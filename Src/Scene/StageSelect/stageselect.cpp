@@ -203,6 +203,12 @@ void StageSelect::DrawStageSelect()
 //ステージセレクト後処理
 void StageSelect::FinStageSelect()
 {
+	//画像消去
+	for (int i = 0; i < STAGE_SELECT_IMAGE_NUMBER; i++)
+	{
+		DeleteGraph(m_imagehandle[i]);
+	}
+
 	if (m_SceneFlag == 0)
 	{
 		//プレイシーンINITへ移動
@@ -223,6 +229,7 @@ void StageSelect::FinStageSelect()
 	//	//オプションシーンINITへ移動
 	//	g_CurrentSceneID = SCENE_ID_INIT_OPTION;
 	//}
+
 }
 
 //ステージアイコン選択処理
