@@ -12,9 +12,17 @@
 #define ENEMY_BULLET_SPD      (2)		//敵弾スピード
 #define ENEMY_BULLET_INTERVAL (40)		//敵弾発射間隔
 
+struct EnemyBulletInfo
+{
+	int bullethandle;		//弾画像ハンドル
+	int x, y;				//座標
+	bool bulletisUse;		//弾使用中フラグ
+};
+
 class Enemy
 {
 protected:
+
 	//敵初期化情報
 	int handle = 0;				//画像ハンドル
 	int Experience = 0;			//敵の経験値
@@ -24,9 +32,7 @@ protected:
 	float Posy = 0.0f;			//Y座標
 	bool Enemy_is_alive;		//敵生存フラグ
 
-	//敵弾情報
-	int bullet_handle = 0;		//弾画像ハンドル
-	bool bullet_is_use;			//弾使用フラグ
+	
 
 public:
 

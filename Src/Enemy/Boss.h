@@ -1,6 +1,7 @@
 #pragma once
 #include "enemy.h"
 
+#define BOSS_MAX_NUM	  (1)		//ボス最大数
 #define BOSS_IMAGE_PATH				//ボス画像パス
 #define BOSS_EXPERIENCE	  (5)		//ボス経験値
 #define	BOSS_POINT		  (10)		//ボスから獲得できる得点
@@ -23,7 +24,7 @@ private:
 	float BossX = 0.0f;				//ボスのX座標
 	float BossY = 0.0f;				//ボスのY座標
 
-	bool  Boss_is_alive;			//ボス生存フラグ
+	bool Boss_is_alive;				//ボス生存フラグ
 
 public:
 
@@ -43,7 +44,7 @@ public:
 	void ATKBoss();
 
 	//ボス後処理
-	void FinBoss();
+	bool FinBoss();
 
 
 };
