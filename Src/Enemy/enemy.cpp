@@ -3,11 +3,12 @@
 #include "../Scene/Scene.h"
 #include "../Collision/Collision.h"
 #include "../Player/player.h"
-
+#include "../Common.h"
 
 Enemy::Enemy(){}			//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 Enemy::~Enemy(){}			//ƒfƒXƒgƒ‰ƒNƒ^
 
+//“GƒXƒe[ƒ^ƒX
 void Enemy::InitEnemy()		//“G‰Šú‰»
 {
 	/*“G‰Šú‰»î•ñ*/
@@ -32,13 +33,6 @@ void Enemy::DrawEnemy()		//“G•`‰æ
 			DrawRotaGraph();
 		}
 	}*/
-
-	
-}
-
-void Enemy::ATKEnemy()		//“GUŒ‚
-{
-
 }
 
 bool Enemy::FinEnemy()		//“GŒãˆ—
@@ -50,10 +44,67 @@ bool Enemy::FinEnemy()		//“GŒãˆ—
 			return false;
 		}
 	}
-
 	//“G‚ª“|‚³‚ê‚½
 	return true;
-
 }
 
+//“G’e‰Šú‰»
+void Enemy::InitEnemyBullet()
+{
+	for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
+	{
+		enemybullet->bullethandle = 0;	//“G’e‰æ‘œƒnƒ“ƒhƒ‹
+		enemybullet->x = 0;				//XÀ•W
+		enemybullet->y = 0;				//YÀ•W
+		enemybullet->isuse = false;		//g—p’†ƒtƒ‰ƒO
+	}
+}
 
+//“G’e“Ç‚İ‚İ
+void Enemy::LoadEnemyBullet()
+{
+	//enemybullet->bullethandle= LoadGraph(ENEMY_BULLRT_PATH);
+}
+
+void Enemy::DrawEnemyBullet()
+{
+	/*for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
+	{
+		if (enemybullet->isuse)
+		{
+			DrawRotaGraph();
+		}
+	}*/
+}
+
+void Enemy::MoveEnemyBullet()
+{
+	for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
+	{
+		if (enemybullet[i].isuse)
+		{
+			enemybullet[i].y += 5;
+			if (enemybullet[i].y< WINDOW_HEIGHT)
+			{
+				enemybullet[i].isuse = false;
+			}
+		}
+	}
+}
+
+void Enemy::shotEnemyBullet()
+{
+	///*for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
+	//{
+	//	if (enemybullet[i].isuse)
+	//	{
+	//		enemybullet[i].x;
+	//		enemybullet[i].y = EnemyPosy + ENEMY_H;
+
+	//		enemybullet[i].isuse = true;
+
+	//		break;
+
+	//	}*/
+	//}
+}
