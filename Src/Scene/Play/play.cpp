@@ -27,8 +27,12 @@ const char* PLAY_IMAGE_PATH[PLAY_IMAGE_NUMBER] =
 void Play::InitPlay()
 {
 	//背景座標
-	m_Back_x = 640;		
-	m_Back_y = 360;
+	m_Back_x = BACK_X;		
+	m_Back_y = BACK_Y;
+	m_Back_x_2 = -m_Back_x;
+	m_Back_y_2 = -m_Back_y;
+
+	m_scrollFlame = 0;		//スクロールフレーム
 
 	m_imagehandle[0] = LoadGraph(PLAY_IMAGE_PATH[0]);	//プレイ背景画像
 
@@ -39,6 +43,25 @@ void Play::InitPlay()
 //プレイ通常処理
 void Play::StepPlay()
 {
+	//フレームカウント
+	m_scrollFlame++;
+
+	//プレイシーンに行って3秒停止
+	if (m_scrollFlame >= 180)
+	{
+		m_Back_y += BACK_SPEED;
+		m_Back_y_2 += BACK_SPEED;
+	}
+	//スクロール処理
+	if (m_Back_y > 360 + 710)
+	{
+		m_Back_y = -BACK_Y;
+	}
+	if (m_Back_y_2 > 360 + 710)
+	{
+		m_Back_y_2 = -BACK_Y;
+	}
+
 	//クリアシーンへの遷移
 	//Enterキー押されたなら
 	if (IsKeyPush(KEY_INPUT_RETURN))
@@ -68,7 +91,9 @@ void Play::StepPlay()
 //プレイ描画処理
 void Play::DrawPlay()
 {
-	DrawRotaGraph(m_Back_x, m_Back_y, 1.0f, 0.0f, m_imagehandle[0], true); //プレイ背景描画
+	//プレイ背景描画
+	DrawRotaGraph(m_Back_x, m_Back_y, 1.0f, 0.0f, m_imagehandle[0], true);
+	DrawRotaGraph(m_Back_x, m_Back_y_2, 1.0f, 0.0f, m_imagehandle[0], true);
 
 }
 
@@ -91,3 +116,5 @@ void Play::FinPlay()
 
 	}
 }
+
+
