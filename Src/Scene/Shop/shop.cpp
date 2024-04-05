@@ -7,9 +7,22 @@
 // ショップシーン
 //=============================
 
+//ステージセレクト画像パス
+const char* SHOP_IMAGE_PATH[SHOP_IMAGE_NUMBER] =
+{
+	SHOP_BACK_IMAGE_PATH,		//ショップ背景
+	SHOP_SCROLL_IMAGE_PATH,		//スクロール
+	SHOP_PATH,					//ショップ
+
+};
+
 //ショップ初期化
 void Shop::InitShop()
 {
+	m_imagehandle[0] = LoadGraph(SHOP_IMAGE_PATH[0]);	//ショップ背景
+	m_imagehandle[1] = LoadGraph(SHOP_IMAGE_PATH[1]);	//スクロール
+	m_imagehandle[2] = LoadGraph(SHOP_IMAGE_PATH[2]);	//ショップ
+
 	//ショップループへ
 	g_CurrentSceneID = SCENE_ID_LOOP_SHOP;
 }
@@ -33,7 +46,6 @@ void Shop::StepShop()
 	//if (IsKeyPush(KEY_INPUT_TAB))
 	//{
 	//	m_SceneFlag = 1;
-
 	//	//ショップ後処理へ移動
 	//	g_CurrentSceneID = SCENE_ID_FIN_SHOP;
 	//}
@@ -43,12 +55,9 @@ void Shop::StepShop()
 //ショップ描画処理
 void Shop::DrawShop()
 {
-	//ショップ背景	
-	DrawRotaGraph(640, 360, 1.0f, 0.0f, m_imagehandle[0], true);
-
-	//デバッグ
-	DrawFormatString(0, 0, GetColor(255, 255, 255), "ショップシーンです", true);
-	DrawFormatString(0, 100, GetColor(255, 255, 255), "ステージセレクトに戻るにはenterを押してください。", true);
+	DrawRotaGraph(640, 360, 1.0f, 0.0f, m_imagehandle[0], true);	//ショップ背景	
+	DrawRotaGraph(390, 360, 1.4f, 0.0f, m_imagehandle[1], true);	//スクロール
+	DrawRotaGraph(420, 120, 0.35f, 0.0f, m_imagehandle[2], true);	//ショップ
 
 }
 
