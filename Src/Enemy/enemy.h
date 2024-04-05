@@ -2,7 +2,7 @@
 
 //敵情報
 #define	ENEMY_PATH						//敵の弾パス
-#define ENEMY_MAX_NUM		 			//敵の数
+#define ENEMY_MAX_NUM		  (40)		//敵の数
 #define ENEMY_ATK			  (1)		//敵攻撃力
 #define ENEMY_POINT			  (3)		//敵得点
 #define ENEMY_EXPERIENCE	  (2)		//敵経験値
@@ -12,9 +12,17 @@
 #define ENEMY_BULLET_SPD      (2)		//敵弾スピード
 #define ENEMY_BULLET_INTERVAL (40)		//敵弾発射間隔
 
+struct EnemyBulletInfo
+{
+	int bullethandle;		//弾画像ハンドル
+	int x, y;				//座標
+	bool bulletisUse;		//弾使用中フラグ
+};
+
 class Enemy
 {
 protected:
+
 	//敵初期化情報
 	int handle = 0;				//画像ハンドル
 	int Experience = 0;			//敵の経験値
@@ -24,9 +32,7 @@ protected:
 	float Posy = 0.0f;			//Y座標
 	bool Enemy_is_alive;		//敵生存フラグ
 
-	//敵弾情報
-	int bullet_handle = 0;		//弾画像ハンドル
-	bool bullet_is_use;			//弾使用フラグ
+	
 
 public:
 
@@ -55,7 +61,7 @@ public:
 	void DrawEnemyBullet();
 
 	//敵の後処理
-	void FinEnemy();
+	bool FinEnemy();
 
 
 	//敵全滅チェック

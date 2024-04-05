@@ -17,6 +17,7 @@ void Boss::InitBoss()						//プレイ初期化
 	Boss_point = BOSS_POINT;				//ボスポイント
 	Boss_experience = BOSS_EXPERIENCE;		//ボス経験値
 	Boss_is_alive = true;					//ボス生存フラグ
+
 }
 
 void Boss::LoadBoss()						//ボス読み込み
@@ -26,18 +27,32 @@ void Boss::LoadBoss()						//ボス読み込み
 
 void Boss::DrawBoss()						//ボス描画
 {
-	//DrawRotaGraph()
+	/*for (int i = 0; i < BOSS_MAX_NUM; i++)
+	{
+		if (Boss_is_alive)
+		{
+			DrawRotaGraph()
+		}
+	}*/
+	
 }
 
 void Boss::ATKBoss()						//ボス攻撃
 {
-	/*for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
-	{
-
-	}*/
+	
 }
 
-void Boss::FinBoss()						//ボス後処理
+bool Boss::FinBoss()						//ボス後処理
 {
 
+	for (int i = 0; i < BOSS_MAX_NUM; i++)
+	{
+		if (Boss_is_alive) {
+			//ボスが生きている
+			return false;
+		}
+	}
+
+	//ボスが倒された
+	return true;
 }
