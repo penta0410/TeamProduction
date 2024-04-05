@@ -26,7 +26,14 @@ void Enemy::LoadEnemy()		//“G“Ç‚İ‚İ
 
 void Enemy::DrawEnemy()		//“G•`‰æ
 {
-	/*DrawRotaGraph();*/
+	/*for (int i = 0; i < ENEMY_MAX_NUM; i++)
+	{
+		if (Enemy_is_alive) {
+			DrawRotaGraph();
+		}
+	}*/
+
+	
 }
 
 void Enemy::ATKEnemy()		//“GUŒ‚
@@ -34,8 +41,18 @@ void Enemy::ATKEnemy()		//“GUŒ‚
 
 }
 
-void Enemy::FinEnemy()		//“GŒãˆ—
+bool Enemy::FinEnemy()		//“GŒãˆ—
 {
+	for (int i = 0; i < ENEMY_MAX_NUM; i++)
+	{
+		if (Enemy_is_alive) {
+			//“G‚ª¶‚«‚Ä‚¢‚é
+			return false;
+		}
+	}
+
+	//“G‚ª“|‚³‚ê‚½
+	return true;
 
 }
 

@@ -2,7 +2,7 @@
 
 //敵情報
 #define	ENEMY_PATH						//敵の弾パス
-#define ENEMY_MAX_NUM		 			//敵の数
+#define ENEMY_MAX_NUM		  (40)		//敵の数
 #define ENEMY_ATK			  (1)		//敵攻撃力
 #define ENEMY_POINT			  (3)		//敵得点
 #define ENEMY_EXPERIENCE	  (2)		//敵経験値
@@ -61,7 +61,7 @@ public:
 	void DrawEnemyBullet();
 
 	//敵の後処理
-	void FinEnemy();
+	bool FinEnemy();
 
 
 	//敵全滅チェック
