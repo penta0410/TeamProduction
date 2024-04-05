@@ -105,6 +105,10 @@ void StageSelect::StepStageSelect()
 		}
 		else if (IsKeyPush(KEY_INPUT_TAB) == 1 && m_MenuFlag == true)
 		{
+			//メニューボタンフレーム座標を初期化
+			m_MenuBottanFlame_x = 302;
+			m_MenuBottanFlame_y = 324;
+			m_StageFlag = 1;		//ステージフラグを初期化
 			m_SceneFlag = 0;		//シーンフラグをプレイシーンに
 			m_MenuFlag = false;		//メニューフラグをoffに
 		}
@@ -199,6 +203,12 @@ void StageSelect::DrawStageSelect()
 //ステージセレクト後処理
 void StageSelect::FinStageSelect()
 {
+	//画像消去
+	for (int i = 0; i < STAGE_SELECT_IMAGE_NUMBER; i++)
+	{
+		DeleteGraph(m_imagehandle[i]);
+	}
+
 	if (m_SceneFlag == 0)
 	{
 		//プレイシーンINITへ移動
@@ -219,6 +229,7 @@ void StageSelect::FinStageSelect()
 	//	//オプションシーンINITへ移動
 	//	g_CurrentSceneID = SCENE_ID_INIT_OPTION;
 	//}
+
 }
 
 //ステージアイコン選択処理
@@ -230,18 +241,17 @@ void StageSelect::StageIconSelect()
 //メニュー処理
 void StageSelect::Menu()
 {
-	
 	//透過背景
 	SetDrawBlendMode(DX_BLENDMODE_ALPHA, 180);
 	DrawBox(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, GetColor(0, 0, 0), true);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
-
 	DrawRotaGraph(300, 300, 0.6f, 0.0f, m_imagehandle[11], true);	//ショップボタン
 	DrawRotaGraph(600, 300, 0.6f, 0.0f, m_imagehandle[12], true);	//タイトルに戻るボタン
 	DrawRotaGraph(900, 300, 0.6f, 0.0f, m_imagehandle[13], true);	//タイトルに戻るボタン
-	
 	//メニューボタンフレームパス
 	DrawRotaGraph(m_MenuBottanFlame_x, m_MenuBottanFlame_y, 0.25f, 0.0f, m_imagehandle[14], true);	
+	DrawRotaGraph(1210, 680, 0.65f, 0.0f, m_imagehandle[2], true);	//戻るボタン
+	DrawRotaGraph(1240, 710, 0.07f, 0.0f, m_imagehandle[5], true);	//タブボタン描画
 
 	//メニュー選択横移動処理
 	//左

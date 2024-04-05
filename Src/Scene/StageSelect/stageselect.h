@@ -2,7 +2,7 @@
 #include "../../Scene/Scene.h"
 #include "../../Scene/Title/title.h"
 
-const int STAGE_SELECT_IMAGE_NUMBER = 20; //ステージセレクト画像枚数
+const int STAGE_SELECT_IMAGE_NUMBER = 16; //ステージセレクト画像枚数
 
 const int BOTTAN_IMAGE_NUMBER = 10;		//ボタン画像枚数
 
@@ -52,10 +52,10 @@ private:
 	//ステージアイコン座標
 	int m_StageIcon_x[STAGE_NUM] = { 0 };
 	int m_StageIcon_y[STAGE_NUM] = { 0 };
+
 	int m_StageFlag = 0;			//ステージフラグ
 	int m_MenuBottanFlame = 0;		//メニューボタンフレーム
 	bool m_MenuFlag = false;	//メニューフラグ
-	
 	int m_MenuBottanFlag = 0;		//メニューボタンのフラグ
 
 	//メニューボタンフレーム座標

@@ -17,6 +17,9 @@ protected:		//ほかのシーンでも使うもの
 	int m_Mouse_x = 0;	//ｘ座標
 	int m_Mouse_y = 0;	//y座標
 
+	int m_Back_x = 0;	//x座標
+	int m_Back_y = 0;	//y座標
+
 	//背景画像ハンドル
 	int m_imagehandle[TITLE_IMAGE_NUMBER] = { 0 };
 
