@@ -3,12 +3,13 @@
 
 const int PLAY_IMAGE_NUMBER = 10;	//画像枚数
 
-#define PLAY_BACK_PATH		"Data/PlaiImage/haikei.png"		//プレイシーン背景パス
+#define PLAY_BACK_PATH		"Data/PlayImage/haikei.png"		//プレイシーン背景パス
 
 class Play : public Title
 {
 private:
 
+	
 
 public:
 

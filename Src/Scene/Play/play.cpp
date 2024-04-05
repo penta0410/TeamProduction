@@ -26,6 +26,10 @@ const char* PLAY_IMAGE_PATH[PLAY_IMAGE_NUMBER] =
 //プレイ初期化  
 void Play::InitPlay()
 {
+	//背景座標
+	m_Back_x = 640;		
+	m_Back_y = 360;
+
 	m_imagehandle[0] = LoadGraph(PLAY_IMAGE_PATH[0]);	//プレイ背景画像
 
 	//プレイループへ
@@ -64,7 +68,7 @@ void Play::StepPlay()
 //プレイ描画処理
 void Play::DrawPlay()
 {
-	DrawRotaGraph(645, 359, 1.01f, 0.0f, m_imagehandle[0], true); //プレイ背景描画
+	DrawRotaGraph(m_Back_x, m_Back_y, 1.0f, 0.0f, m_imagehandle[0], true); //プレイ背景描画
 
 }
 
