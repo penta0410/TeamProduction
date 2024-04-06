@@ -124,6 +124,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			} break;
 			case SCENE_ID_INIT_SHOP:
 			{
+				//ショップロード
+				m_shop.LoadShop();
 				//ショップ初期化
 				m_shop.InitShop();
 			} break;

@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include "../Scene/Shop/shop.h"
 
 #define PLAYER_IMAGE_PATH "Data/PlayImage/majo.png"			//プレイヤー画像パス
 #define PLAYER_DEFAULT_MOVE_X	   10.0f							//プレイヤーのデフォルトの移動量
@@ -6,6 +7,7 @@
 #define PLAYER_DEFAULT_ATK		   1								//プレイヤーのデフォルトの攻撃力
 #define PLAYER_DEFAULT_ATK_SPEED   2								//プレイヤーのデフォルトの攻撃速度
 #define PLAYER_DEFAULT_DEF		   1								//プレイヤーのデフォルトの守備力
+#define PLAYER_DEFAULT_SPEED       2								//プレイヤーのデフォルト移動速度
 #define PLAYER_DEFAULT_LEVEL	   1								//プレイヤーのデフォルトのレベル
 #define PLAYER_BEGINNER_LEVEL	   20								//プレイヤーのビギナーレベル
 #define PLAYER_MAX_LEVEL		   100								//プレイヤーのマックスレベル
@@ -16,6 +18,8 @@
 class Player
 {
 private:
+
+	Shop m_shop;	//ショップクラス
 
 	int image_handle = 0;									//プレイヤー画像ハンドル
 
@@ -29,6 +33,7 @@ private:
 	int HP  = 0;											//プレイヤーの体力
 	int ATK = 0;											//プレイヤーの攻撃力
 	int ATK_SPEED = 0;										//プレイヤーの攻撃速度
+	int Move_Speed = 0;										//プレイヤーの移動速度
 	int DEF = 0;											//プレイヤーの守備力
 	int level_border_line = 5;								//レベルの境界線
 
@@ -53,10 +58,12 @@ public:
 															//プレイヤーのレベル処理
 	void Level_Up();
 
+	int GetPlayer_Hp() { return HP; };						//プレイヤーHPゲット処理
+
 	class AttackPattern
 	{
 	private:
-		
+
 	public:
 		void beam();
 		void arrow();

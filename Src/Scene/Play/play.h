@@ -1,5 +1,7 @@
 #pragma once
 #include "../Title/title.h"
+#include "../../Player/player.h"
+#include "../Shop/shop.h"
 
 const int PLAY_IMAGE_NUMBER = 3;	//画像枚数
 
@@ -14,6 +16,8 @@ class Play : public Title
 {
 private:
 
+	Player m_player;	//プレイヤークラス
+	Shop m_shop;
 	int m_scrollFlame = 0;		//スクロールフレーム
 	
 

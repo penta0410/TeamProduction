@@ -1,5 +1,5 @@
 #include "DxLib.h"
-#include "Player.h"
+#include "player.h"
 #include "../Input/Input.h"
 #include "../Scene/Play/Play.h"
 #include "../Screen/Screen.h"
@@ -8,6 +8,7 @@
 #include "../Collision/Collision.h"
 #include "../Enemy/Enemy.h"
 #include "../Common.h"
+
 
 Player::Player()
 {
@@ -31,6 +32,7 @@ void Player::Init()
 	ATK				 = PLAYER_DEFAULT_ATK;
 	ATK_SPEED		 = PLAYER_DEFAULT_ATK_SPEED;
 	DEF			     = PLAYER_DEFAULT_DEF;
+	Move_Speed       = PLAYER_DEFAULT_SPEED;
 	EXPERIENCE_POINT = 0;
 	LEVEL		     = PLAYER_DEFAULT_LEVEL;
 }

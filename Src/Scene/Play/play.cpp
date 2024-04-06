@@ -26,6 +26,9 @@ const char* PLAY_IMAGE_PATH[PLAY_IMAGE_NUMBER] =
 //プレイ初期化  
 void Play::InitPlay()
 {
+	//プレイヤー初期化
+	m_player.Init();
+	
 	//背景座標
 	m_Back_x = BACK_X;		
 	m_Back_y = BACK_Y;
@@ -91,9 +94,12 @@ void Play::StepPlay()
 //プレイ描画処理
 void Play::DrawPlay()
 {
+
 	//プレイ背景描画
 	DrawRotaGraph(m_Back_x, m_Back_y, 1.0f, 0.0f, m_imagehandle[0], true);
 	DrawRotaGraph(m_Back_x, m_Back_y_2, 1.0f, 0.0f, m_imagehandle[0], true);
+
+	DrawFormatString(100, 100, GetColor(0, 0, 0), "%d", m_player.GetPlayer_Hp(), true);
 
 }
 
