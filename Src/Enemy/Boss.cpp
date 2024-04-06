@@ -67,6 +67,25 @@ void InitBossBullet()
 	}
 }
 
+//bool Boss::BossShotBullet(int shotPosX, int shotPosY)
+//{
+//	for (int i = 0; i < BOSS_BULLET_MAX_NUM; i++)
+//	{
+//		if (bossbulletIndex[i].BossbulletUse)
+//		{
+//			//弾座標の初期位置に敵の座標
+//			bossbulletIndex[i].x = shotPosX;
+//			bossbulletIndex[i].y = shotPosY + BOSS_H;
+//			bossbulletIndex[i].BossbulletUse = true;
+//
+//			//発射成功
+//			return true;
+//		}
+//	}
+//	//失敗
+//	return false;
+//}
+
 //ボス弾読み込み
 void Boss::LoadBossBullet()
 {
@@ -93,6 +112,8 @@ void Boss::MoveBossBullet()
 		if (bossbulletIndex[i].BossbulletUse)
 		{
 			bossbulletIndex->y += 3;
+
+			//画面外に出たら未使用に戻す
 			if (bossbulletIndex[i].y < WINDOW_HEIGHT)
 			{
 				bossbulletIndex->BossbulletUse = false;

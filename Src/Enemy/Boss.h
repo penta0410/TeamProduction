@@ -64,6 +64,9 @@ public:
 	//ボス弾描画
 	void DrawBossBullet();
 
+	//ボス弾発射処理
+	bool BossShotBullet(int shotPosX,int shotPosY);
+
 	//ボス弾移動処理
 	void MoveBossBullet();
 
