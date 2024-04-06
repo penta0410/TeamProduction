@@ -15,11 +15,12 @@ private:
 
 	Player m_player;	//プレイヤークラス宣言
 
-	int PlayerHp = 0;
-	int PlayerAttackPower = 0;
-	int PlayerAttackInterval = 0;
-	int ScoreUp = 0;
-
+	int m_PlayerHp = 0;
+	int m_PlayerAttackPower = 0;
+	int m_PlayerAttackInterval = 0;
+	int m_ScoreUp = 0;
+	int m_MoveSpeed = 0;
+	int m_MoneyAmmountUp = 0;
 
 public:
 

@@ -53,6 +53,10 @@ void Shop::DrawShop()
 	DrawRotaGraph(420, 120, 0.35f, 0.0f, m_imagehandle[2], true);	//ショップ
 	DrawRotaGraph(1210, 680, 0.65f, 0.0f, m_imagehandle[3], true);	//戻るボタン描画
 	DrawRotaGraph(1240, 710, 0.07f, 0.0f, m_imagehandle[4], true);	//タブボタン描画
+	m_PlayerHp = 1000000000;
+	SetFontSize(30);
+	DrawFormatString(450, 190, GetColor(0, 0, 0), "初期HP：%d", m_PlayerHp, true); //
+
 }
 
 //ショップ後処理
@@ -64,9 +68,6 @@ void Shop::FinShop()
 		g_CurrentSceneID = SCENE_ID_INIT_STAGE_SELECT;
 	}
 
-	/*if (m_SceneFlag == 1)
-	{
-		
-	}*/
+	
 
 }
