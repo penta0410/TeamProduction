@@ -66,6 +66,7 @@ void Enemy::LoadEnemyBullet()
 	//enemybullet->bullethandle= LoadGraph(ENEMY_BULLRT_PATH);
 }
 
+//“G’e•`‰æ
 void Enemy::DrawEnemyBullet()
 {
 	/*for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
@@ -77,6 +78,7 @@ void Enemy::DrawEnemyBullet()
 	}*/
 }
 
+//“G’eˆÚ“®ˆ—
 void Enemy::MoveEnemyBullet()
 {
 	for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
@@ -92,19 +94,20 @@ void Enemy::MoveEnemyBullet()
 	}
 }
 
+//“G’e”­ŽËˆ—
 void Enemy::shotEnemyBullet()
 {
-	///*for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
-	//{
-	//	if (enemybullet[i].isuse)
-	//	{
-	//		enemybullet[i].x;
-	//		enemybullet[i].y = EnemyPosy + ENEMY_H;
+	/*for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
+	{
+		if (enemybullet[i].isuse)
+		{
+			enemybullet[i].x;
+			enemybullet[i].y = EnemyPosy + ENEMY_H;
 
-	//		enemybullet[i].isuse = true;
+			enemybullet[i].isuse = true;
 
-	//		break;
+			break;
 
-	//	}*/
-	//}
+		}
+	}*/
 }

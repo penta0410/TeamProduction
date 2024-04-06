@@ -10,9 +10,21 @@
 #define BOSS_W						//ボス横サイズ
 #define BOSS_H						//ボス縦サイズ
 
+#define BOSS_BULLET_PATH			//画像パス
+#define BOSS_BULLET_MAX_NUM (50)	//ボス弾数
+
+struct BossBullet
+{
+	int bosshandle;
+	int x, y;
+	bool BossbulletUse;
+};
+
+BossBullet bossbulletIndex[BOSS_BULLET_MAX_NUM] = { 0 };
+
 class Boss:public Enemy
 {
-private:
+protected:
 
 	//敵情報
 	int Boss_handle = 0;			//ボス画像ハンドル
@@ -40,11 +52,19 @@ public:
 	//ボス描画
 	void DrawBoss();
 
-	//ボス攻撃
-	void ATKBoss();
-
 	//ボス後処理
 	bool FinBoss();
 
+	//ボス弾初期化
+	void InitBossBullet();
+
+	//ボス弾読み込み
+	void LoadBossBullet();
+
+	//ボス弾描画
+	void DrawBossBullet();
+
+	//ボス弾移動処理
+	void MoveBossBullet();
 
 };

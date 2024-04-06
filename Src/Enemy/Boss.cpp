@@ -1,5 +1,6 @@
 #include "DxLib.h"
 #include "Boss.h"
+#include "../Common.h"
 #include "../Scene/Scene.h"
 #include "../Collision/Collision.h"
 #include "../Player/player.h"
@@ -37,10 +38,7 @@ void Boss::DrawBoss()						//ボス描画
 	
 }
 
-void Boss::ATKBoss()						//ボス攻撃
-{
-	
-}
+
 
 bool Boss::FinBoss()						//ボス後処理
 {
@@ -55,4 +53,50 @@ bool Boss::FinBoss()						//ボス後処理
 
 	//ボスが倒された
 	return true;
+}
+
+//ボス弾初期化
+void InitBossBullet()
+{
+	for (int i = 0; i < BOSS_BULLET_MAX_NUM; i++)
+	{
+		bossbulletIndex->bosshandle = 0;
+		bossbulletIndex->x = 0;
+		bossbulletIndex->y = 0;
+		bossbulletIndex->BossbulletUse = false;
+	}
+}
+
+//ボス弾読み込み
+void Boss::LoadBossBullet()
+{
+	//bossbulletIndex->bosshandle = LoadGraph(BOSS_BULLET_PATH);
+}
+
+//ボス弾描画
+void Boss::DrawBossBullet()
+{
+	/*for (int i = 0; i < BOSS_BULLET_MAX_NUM; i++)
+	{
+		if (bossbulletIndex->isuse)
+		{
+			DrawRotaGraph();
+		}
+	}*/
+}
+
+//ボス弾移動処理
+void Boss::MoveBossBullet()
+{
+	for (int i = 0; i < BOSS_BULLET_MAX_NUM; i++)
+	{
+		if (bossbulletIndex[i].BossbulletUse)
+		{
+			bossbulletIndex->y += 3;
+			if (bossbulletIndex[i].y < WINDOW_HEIGHT)
+			{
+				bossbulletIndex->BossbulletUse = false;
+			}
+		}
+	}
 }
