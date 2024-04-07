@@ -44,6 +44,7 @@ void Shop::LoadShop()
 //ショップ初期化
 void Shop::InitShop()
 {
+	
 
 	//ショップループへ
 	g_CurrentSceneID = SCENE_ID_LOOP_SHOP;
@@ -90,7 +91,7 @@ void Shop::DrawShop()
 	
 
 	SetFontSize(36);
-	DrawFormatString(350, 170, GetColor(0, 0, 0), "HP：%d", m_PlayerHp, true); //プレイヤーｈｐ表示
+	DrawFormatString(350, 170, GetColor(0, 0, 0), "HP：%d", m_PlayerHp , true); //プレイヤーｈｐ表示
 	
 	SetFontSize(16);
 

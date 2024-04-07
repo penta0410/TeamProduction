@@ -149,9 +149,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			case SCENE_ID_LOOP_PLAY:
 			{
 				//プレイ描画処理
-				m_play.DrawPlay();
+				m_play.DrawPlay(m_shop.GetPlayerHpUp());
 				//プレイ通常処理
-				m_play.StepPlay();
+				m_play.StepPlay(m_shop.GetPlayerHpUp());
+
 			} break;
 			case SCENE_ID_FIN_PLAY:
 			{

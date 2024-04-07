@@ -17,7 +17,6 @@ class Play : public Title
 private:
 
 	Player m_player;	//プレイヤークラス
-	Shop m_shop;
 	int m_scrollFlame = 0;		//スクロールフレーム
 	
 
@@ -30,10 +29,10 @@ public:
 	void InitPlay();
 
 	//プレイ通常処理
-	void StepPlay();
+	void StepPlay(int hp);
 
 	//プレイ描画処理
-	void DrawPlay();
+	void DrawPlay(int hp);
 
 	//プレイ後処理
 	void FinPlay();

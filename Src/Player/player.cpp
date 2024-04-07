@@ -86,3 +86,9 @@ void Player::Level_Up()
 		}
 	}
 }
+
+//プレイヤーｈｐセット
+void  Player::SetPlayer_Hp(int hp)
+{
+	HP = HP + hp;
+}

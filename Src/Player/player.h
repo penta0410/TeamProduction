@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "../Scene/Shop/shop.h"
+
 
 #define PLAYER_IMAGE_PATH "Data/PlayImage/majo.png"			//プレイヤー画像パス
 #define PLAYER_DEFAULT_MOVE_X	   10.0f							//プレイヤーのデフォルトの移動量
@@ -18,8 +18,6 @@
 class Player
 {
 private:
-
-	Shop m_shop;	//ショップクラス
 
 	int image_handle = 0;									//プレイヤー画像ハンドル
 
@@ -59,6 +57,8 @@ public:
 	void Level_Up();
 
 	int GetPlayer_Hp() { return HP; };						//プレイヤーHPゲット処理
+	
+	void  SetPlayer_Hp(int hp);									//プレイヤーｈｐセット
 
 	class AttackPattern
 	{

@@ -24,6 +24,8 @@ class Shop : public Title
 
 private:
 
+	
+
 	int m_PlayerHp = 0;					//プレイヤーｈｐ増加量を保存する
 	int m_PlayerAttackPower = 0;		//プレイヤー攻撃力増加量を保存する
 	int m_PlayerAttackInterval = 0;		//プレイヤー攻撃頻度を保存する
