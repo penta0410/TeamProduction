@@ -6,12 +6,20 @@
 //=============================
 // ゲームオーバーシーン
 //=============================
-//
-//GAME_OVER_BACK_PATH
+
+
+//ステージセレクト画像パス
+const char* GAME_OVER_IMAGE_PATH[GAME_OVER_IMAGE_NUMBER] =
+{
+	GAME_OVER_BACK_PATH,			//ゲームオーバー画面
+
+};
 
 //ゲームオーバー初期化
 void GameOver::InitGameOver()
 {
+	m_imagehandle[0] = LoadGraph(GAME_OVER_IMAGE_PATH[0]);
+
 	//プレイループへ
 	g_CurrentSceneID = SCENE_ID_LOOP_GAMEOVER;
 }
@@ -34,12 +42,8 @@ void GameOver::StepGameOver()
 //ゲームオーバー描画処理
 void GameOver::DrawGameOver()
 {
-	
-	//デバッグ
-	DrawFormatString(0, 30, GetColor(255, 255, 255),
-		"ゲームオーバーシーンです。", true);
-	DrawFormatString(0, 130, GetColor(255, 255, 255), 
-		"ステージセレクトにはエンターを押してください", true);
+	//ゲームオーバー背景描画
+	DrawRotaGraph(640, 360, 01.0f, 0.0f, m_imagehandle[0], true);
 
 }
 

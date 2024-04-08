@@ -36,7 +36,8 @@ private:
 	int level_border_line = 0;								//レベルの境界線
 	bool invisible = false;									//無敵状態
 	int invisible_cool_time = 0;							//プレイヤーの無敵時間
-	float radius = 0;										//プレイヤーの半径
+	float radius = 0;				                        //プレイヤーの半径
+
 public:
 
 															//コンストラクタ
@@ -64,7 +65,8 @@ public:
 															//プレイヤー無敵処理
 	void Invisible_Time();
 															//エネミーに当たったら
-	void Hit_enemy();
+	/*void Hit_enemy();*/
+
 	class AttackPattern
 	{
 	private:
