@@ -65,6 +65,12 @@ public:
 	//ボス弾発射処理
 	bool BossShotBullet(int shotPosX,int shotPosY);
 
+	//ボスの弾とプレイヤーの当たり判定
+	void BossBulletCllision();
+
+	//ボスとプレイヤーの当たり判定
+	void BossPlayerCollision();
+
 	//ボス弾移動処理
 	void MoveBossBullet();
 

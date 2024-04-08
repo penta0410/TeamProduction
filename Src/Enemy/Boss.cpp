@@ -117,3 +117,15 @@ void Boss::MoveBossBullet()
 		}
 	}
 }
+
+//ボスの弾とプレイヤーの当たり判定
+void Boss::BossBulletCllision()
+{
+
+}
+
+//ボスとプレイヤーの当たり判定
+void Boss::BossPlayerCollision()
+{
+
+}
