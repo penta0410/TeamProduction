@@ -2,7 +2,7 @@
 
 //“Gî•ñ
 #define	ENEMY_PATH			  "Data/EnemyImage/Tameo.png"		//“G‚Ì’eƒpƒX
-#define ENEMY_MAX_NUM		  (40)								//“G‚Ì”
+#define ENEMY_MAX_NUM		  (5)								//“G‚Ì”
 #define ENEMY_POINT			  (3)								//“G“¾“_
 #define ENEMY_EXPERIENCE	  (2)								//“GŒoŒ±’l
 #define ENEMY_H				  (64)								//“Gc•
@@ -32,11 +32,14 @@ protected:
 	int point = 0;				//“G‚Ì“¾“_
 	int Radius = 0;				//“G‚Ì”¼Œa
 
-	float EnemyPosx = 0.0f;		//XÀ•W
-	float EnemyPosy = 0.0f;		//YÀ•W
+	float EnemyPosx[ENEMY_MAX_NUM] = { 0.0f };		//XÀ•W
+	float EnemyPosy[ENEMY_MAX_NUM] = { 0.0f };		//YÀ•W
 
 	bool Enemy_is_alive;		//“G¶‘¶ƒtƒ‰ƒO
 
+	//š œA
+	//“GˆÚ“®ƒtƒŒ[ƒ€
+	int m_EnemyMoveFlame = 0;
 
 public:
 
@@ -49,8 +52,11 @@ public:
 	//“G“Ç‚İ‚İ
 	void LoadEnemy();
 
-	//“G‚Ì•`‰æ
+	//“G‚Ì•`‰æ	
 	void DrawEnemy();
+
+	//“G’Êíˆ—  š œA
+	void StepEnemy();
 
 	//“G‚Ìˆ—
 	bool KillEnemy();

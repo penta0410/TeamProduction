@@ -48,15 +48,7 @@ void Title::StepTitle()
 
 	}
 
-	////オプションシーンへの遷移
-	////tab(タブ)キーボタン押されたなら
-	//if (IsKeyPush(KEY_INPUT_TAB))
-	//{
-	//	//タイトルシーンフラグをオプションシーンに変更
-	//	m_SceneFlag = 1;
-	//	//'プレイ後処理'へ移動
-	//	g_CurrentSceneID = SCENE_ID_FIN_TITLE;
-	//}
+	
 
 	//透過処理
 	m_BottanAlpha = Transparent(m_BottanAlpha);
@@ -80,12 +72,6 @@ void Title::DrawTitle()
 	//マウス処理
 	MouseClick();
 
-
-	//デバッグ
-	/*DrawFormatString(100, 100, GetColor(255, 255, 255),
-		"タイトルシーンです", true);
-	DrawFormatString(100, 200, GetColor(255, 255, 255),
-		"ステージ選択シーンへはenterを押してください。", true);*/
 
 }
 

@@ -35,6 +35,15 @@ void Play::InitPlay()
 	//“G‰Šú‰»
 	m_enemy.InitEnemy();
 
+	//“G“Ç‚İ‚İ
+	m_enemy.LoadEnemy();
+
+	//“G’e‰Šú‰»
+	m_enemy.InitEnemyBullet();
+
+	//“G’e“Ç‚İ‚İ
+	m_enemy.LoadEnemyBullet();
+	
 	//”wŒiÀ•W
 	m_Back_x = BACK_X;		
 	m_Back_y = BACK_Y;
@@ -72,16 +81,20 @@ void Play::StepPlay(int hp)
 		m_Back_y_2 = -BACK_Y;
 	}
 
-	//“G’e”­Ëˆ—
+	//“G’e”­Ëˆ—@@—‡
 	m_enemy.shotEnemyBullet();
 
-	//“G’eˆÚ“®ˆ—
+	//“G’eˆÚ“®ˆ—@@—‡
 	m_enemy.MoveEnemyBullet();
 
-	//“Gˆ—
+	//“G’Êíˆ—
+	m_enemy.StepEnemy();
+
+	//“Gˆ—@@—‡
 	m_enemy.KillEnemy();
 
-
+	//ƒvƒŒƒCƒ„[ˆ—
+	m_player.MovePlayer();
 
 	//ƒNƒŠƒAƒV[ƒ“‚Ö‚Ì‘JˆÚ
 	//EnterƒL[‰Ÿ‚³‚ê‚½‚È‚ç
@@ -122,7 +135,7 @@ void Play::DrawPlay(int hp)
 	//ƒvƒŒƒCƒ„[•`‰æ
 	m_player.DrawPlayer();
 	
-	//“G•`‰æ
+	//“G•`‰æ@@—‡
 	m_enemy.DrawEnemy();
 	m_enemy.DrawEnemyBullet();
 

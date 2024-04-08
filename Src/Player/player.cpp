@@ -46,16 +46,24 @@ void Player::LoadPlayer()
 	image_handle = LoadGraph(PLAYER_IMAGE_PATH);
 }
 
-//プレイヤー描画処理
+//プレイヤー描画処理	國廣
 void Player::DrawPlayer()
 {
 	DrawRotaGraph(posX, posY, 1.0f, 0.0f, image_handle, true);
+
 }
 
 void Player::MovePlayer()
 {
-	if (Input_Left())		 posX -= move_x;
-	if (Input_Right())		 posX += move_x;
+	//プレイヤー道当たり判定
+	if (posX > 420)
+	{
+		if (Input_Left())		 posX -= move_x;
+	}
+	if (posX < 850)
+	{
+		if (Input_Right())		 posX += move_x;
+	}
 	if (Input_LeftAndRight())posX += 0.0f;
 	else					 posX += 0.0f;
 }
