@@ -173,6 +173,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				m_clear.StepClear();
 				//ƒNƒŠƒA•`‰æˆ—
 				m_clear.DrawClear();
+
 			} break;
 			case SCENE_ID_FIN_CLEAR:
 			{
