@@ -163,6 +163,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			{
 				//クリア初期化
 				m_clear.InitClear();
+				//クリアロード
+				m_clear.LoadClear();
+
 			} break;
 			case SCENE_ID_LOOP_CLEAR:
 			{

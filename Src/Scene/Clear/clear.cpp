@@ -7,9 +7,24 @@
 // クリアシーン
 //=============================
 
+//ステージクリア画像パス
+const char* CLEAR_PATH[CLEAR_IMAGE_NUMBER] =
+{
+	STAGRE_CLEAR_BACK_PATH,			//ステージクリア画面
+
+};
+
+//クリアロード
+void Clear::LoadClear()
+{
+	m_imagehandle[0] = LoadGraph(CLEAR_PATH[0]);	//クリア画面
+
+}
+
 //プレイ初期化  
 void Clear::InitClear()
 {
+
 	//プレイループへ
 	g_CurrentSceneID = SCENE_ID_LOOP_CLEAR;
 }
@@ -33,12 +48,8 @@ void Clear::StepClear()
 void Clear::DrawClear()
 {
 
-
-	//デバッグ
-	DrawFormatString(100, 100, GetColor(255, 255, 255),
-		"クリアシーンです", true);
-	DrawFormatString(100, 200, GetColor(255, 255, 255),
-		"ステージセレクトへはenterを押してください", true);
+	DrawRotaGraph(640, 360, 1.01f, 0.0f, m_imagehandle[0], true);
+	
 
 }
 
