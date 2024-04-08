@@ -28,7 +28,10 @@ void Play::InitPlay()
 {
 	//プレイヤー初期化
 	m_player.Init();
-	
+
+	//敵初期化
+	m_enemy.InitEnemy();
+
 	//背景座標
 	m_Back_x = BACK_X;		
 	m_Back_y = BACK_Y;
