@@ -68,10 +68,11 @@ public:
 															//プレイヤー無敵処理
 	void Invisible_Time();
 			
+	bool IsHit_Enemy(float enemyx, float enemyy, float enemyradius);
 
 		class bullet
 		{
-		protected:
+		public:
 			int handle = 0;
 			int x, y = 0;
 			bool isuse = false;

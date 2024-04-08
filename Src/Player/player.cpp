@@ -125,8 +125,15 @@ void  Player::SetPlayer_Hp(int hp)
 {
 	HP = HP + hp;
 }
+
+bool Player::IsHit_Enemy(float enemyx, float enemyy, float enemyradius)
+{
+	if (IsHitCircle(posX, posY, radius, enemyx, enemyy, enemyradius))
+		return true;
+	else return false;
+}
 //ƒvƒŒƒCƒ„[’e‰Šú‰»
-void Player::fireball::init_Bullet()
+void Player::bullet::init_Bullet()
 {
 	for (int i = 0; i < PLAYER_BULLET_MAX_NUM; i++)
 	{
