@@ -64,6 +64,12 @@ public:
 	//“G’e•`‰æ
 	void DrawEnemyBullet();
 
+	//“G‚Ì’e‚ÆƒvƒŒƒCƒ„[‚Ì“–‚½‚è”»’è
+	void EnemyBulletCllision();
+
+	//“G‚ÆƒvƒŒƒCƒ„[‚Ì“–‚½‚è”»’è
+	void EnemyPlayerCollision();
+
 	//“G’eˆÚ“®ˆ—
 	void MoveEnemyBullet();
 

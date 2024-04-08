@@ -112,3 +112,34 @@ void Enemy::shotEnemyBullet()
 		}
 	}
 }
+
+//敵の弾とプレイヤーの当たり判定
+void Enemy::EnemyBulletCllision()
+{
+	/*for (int enemybulletindex = 0; enemybulletindex < ENEMY_BULLET_MAX_NUM; enemybulletindex++)
+	{
+		if (enemybullet[enemybulletindex].isuse == false) {
+			continue;
+		}
+		if (IsHitCircle())
+		{
+
+		}
+	}*/
+}
+
+//敵とプレイヤーの当たり判定
+void Enemy::EnemyPlayerCollision()
+{
+	/*for (int i = 0; i < ENEMY_MAX_NUM; i++)
+	{
+		if (Enemy_is_alive == false) {
+			continue;
+		}
+
+		if (IsHitCircle())
+		{
+
+		}
+	}*/
+}

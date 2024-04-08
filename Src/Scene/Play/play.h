@@ -20,7 +20,6 @@ private:
 	Player m_player;	//プレイヤークラス
 	Enemy m_enemy;		//エネミークラス
 	int m_scrollFlame = 0;		//スクロールフレーム
-	
 
 public:
 

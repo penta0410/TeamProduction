@@ -6,7 +6,6 @@
 #define BOSS_EXPERIENCE	  (5)									//ボス経験値
 #define BOSS_RADIUS		  (60)									//ボス半径
 #define	BOSS_POINT		  (10)									//ボスから獲得できる得点
-#define	BOSS_HP			  (20)									//ボスデフォルト
 #define BOSS_W			  (120)									//ボス横サイズ
 #define BOSS_H			  (120)									//ボス縦サイズ
 
@@ -30,7 +29,6 @@ protected:
 	int Boss_handle = 0;			//ボス画像ハンドル
 	int Boss_experience = 0;		//ボスの経験値
 	int Boss_point = 0;				//ボスの得点
-	int Boss_HP = 0;				//ボスの体力
 	int Radius = 0;					//ボス半径
 
 	float BossX = 0.0f;				//ボスのX座標

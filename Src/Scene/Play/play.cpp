@@ -49,15 +49,6 @@ void Play::InitPlay()
 //プレイ通常処理
 void Play::StepPlay(int hp)
 {
-	//敵弾発射処理
-	m_enemy.shotEnemyBullet();
-
-	//敵弾移動処理
-	m_enemy.MoveEnemyBullet();
-
-	//敵処理
-	m_enemy.KillEnemy();
-
 	//フレームカウント
 	m_scrollFlame++;
 
@@ -76,6 +67,17 @@ void Play::StepPlay(int hp)
 	{
 		m_Back_y_2 = -BACK_Y;
 	}
+
+	//敵弾発射処理
+	m_enemy.shotEnemyBullet();
+
+	//敵弾移動処理
+	m_enemy.MoveEnemyBullet();
+
+	//敵処理
+	m_enemy.KillEnemy();
+
+
 
 	//クリアシーンへの遷移
 	//Enterキー押されたなら
