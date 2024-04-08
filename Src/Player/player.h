@@ -3,7 +3,7 @@
 
 #define PLAYER_IMAGE_PATH "Data/PlayImage/majo.png"			//プレイヤー画像パス
 #define PLAYER_DEFAULT_MOVE_X	   10.0f							//プレイヤーのデフォルトの移動量
-#define PLAYER_DEFAULT_HP		   3								//プレイヤーのデフォルトの体力
+#define PLAYER_DEFAULT_HP		   100							//プレイヤーのデフォルトの体力
 #define PLAYER_DEFAULT_ATK		   1								//プレイヤーのデフォルトの攻撃力
 #define PLAYER_DEFAULT_ATK_SPEED   2								//プレイヤーのデフォルトの攻撃速度
 #define PLAYER_DEFAULT_DEF		   1								//プレイヤーのデフォルトの守備力
@@ -37,7 +37,8 @@ private:
 	int level_border_line = 0;								//レベルの境界線
 	bool invisible = false;									//無敵状態
 	int invisible_cool_time = 0;							//プレイヤーの無敵時間
-	float radius = 0;										//プレイヤーの半径
+	float radius = 0;				                        //プレイヤーの半径
+
 public:
 
 															//コンストラクタ
@@ -49,6 +50,8 @@ public:
 															//プレイヤーの読み込み
 	void LoadPlayer();									
 															//プレイヤーの基本的な移動
+	void DrawPlayer();		
+															//プレイヤー描画
 	void MovePlayer();		
 															//Aキーまたは←キーを押しているか
 	bool Input_Left();

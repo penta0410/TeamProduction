@@ -6,8 +6,6 @@
 #define BOSS_EXPERIENCE	  (5)									//ボス経験値
 #define BOSS_RADIUS		  (60)									//ボス半径
 #define	BOSS_POINT		  (10)									//ボスから獲得できる得点
-#define	BOSS_HP			  (20)									//ボスデフォルト体力
-#define BOSS_ATK		  (3)									//ボスデフォルト攻撃力
 #define BOSS_W			  (120)									//ボス横サイズ
 #define BOSS_H			  (120)									//ボス縦サイズ
 
@@ -31,8 +29,6 @@ protected:
 	int Boss_handle = 0;			//ボス画像ハンドル
 	int Boss_experience = 0;		//ボスの経験値
 	int Boss_point = 0;				//ボスの得点
-	int Boss_HP = 0;				//ボスの体力
-	int Boss_ATK = 0;				//ボスの攻撃力
 	int Radius = 0;					//ボス半径
 
 	float BossX = 0.0f;				//ボスのX座標
@@ -68,6 +64,12 @@ public:
 
 	//ボス弾発射処理
 	bool BossShotBullet(int shotPosX,int shotPosY);
+
+	//ボスの弾とプレイヤーの当たり判定
+	void BossBulletCllision();
+
+	//ボスとプレイヤーの当たり判定
+	void BossPlayerCollision();
 
 	//ボス弾移動処理
 	void MoveBossBullet();

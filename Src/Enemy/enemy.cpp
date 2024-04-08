@@ -15,9 +15,28 @@ void Enemy::InitEnemy()		//“G‰Šú‰»
 	handle = 0;							//“G‰æ‘œƒnƒ“ƒhƒ‹
 	Experience = ENEMY_EXPERIENCE;		//“GŒoŒ±’l
 	point = ENEMY_POINT;				//“G“¾“_
-	Radius = RADIUS;					//“G”¼Œa
+	Radius = RADIUS;			//“G”¼Œa
+
+	
 
 	Enemy_is_alive = true;				//“G¶‘¶ƒtƒ‰ƒO
+
+	//š œA================================
+	//“GÀ•W
+	EnemyPosx[0] = 500;
+	EnemyPosx[1] = 800;
+	EnemyPosx[2] = 500;
+	EnemyPosx[3] = 800;
+	EnemyPosx[4] = 500;
+	EnemyPosy[0] = 0;
+	EnemyPosy[1] = -800;
+	EnemyPosy[2] = -2000;
+	EnemyPosy[3] = -3200;
+	EnemyPosy[4] = -4400;
+
+	//“GˆÚ“®ƒtƒŒ[ƒ€
+	m_EnemyMoveFlame = 0;
+	//======================================
 
 }
 
@@ -28,15 +47,36 @@ void Enemy::LoadEnemy()		//“G“Ç‚İ‚İ
 
 void Enemy::DrawEnemy()		//“G•`‰æ
 {
-	for (int i = 0; i < ENEMY_MAX_NUM; i++)
+	if (Enemy_is_alive)
 	{
-		if (Enemy_is_alive) {
-			DrawRotaGraph(EnemyPosx,EnemyPosy,1.0,0.0,handle,true);
+		//“G‚Ì”‚¾‚¯‰ñ‚·
+		for (int m_enemy_num = 0; m_enemy_num < ENEMY_MAX_NUM; m_enemy_num++)
+		{
+			DrawRotaGraph(EnemyPosx[m_enemy_num], EnemyPosy[m_enemy_num],
+				2.0f, 0.0f, handle, true);
 		}
 	}
+
 }
 
-bool Enemy::FinEnemy()		//“GŒãˆ—
+//“G’Êíˆ—  š œA
+void Enemy::StepEnemy()
+{
+	//ƒtƒŒ[ƒ€ƒCƒ“ƒNƒŠƒƒ“ƒg
+	m_EnemyMoveFlame++;
+
+	//ƒvƒŒƒCƒV[ƒ“‚És‚Á‚Ä3•b’â~
+	if (m_EnemyMoveFlame >= 180)
+	{
+		for (int i = 0; i < ENEMY_MAX_NUM; i++)
+		{
+			EnemyPosy[i] += 4;
+		}
+	}
+
+}
+
+bool Enemy::KillEnemy()		//“Gˆ—
 {
 	for (int i = 0; i < ENEMY_MAX_NUM; i++)
 	{
@@ -103,7 +143,7 @@ void Enemy::shotEnemyBullet()
 		if (enemybullet[i].isuse)
 		{
 			enemybullet[i].x;
-			enemybullet[i].y = EnemyPosy + ENEMY_H;
+			/*enemybullet[i].y = EnemyPosy + ENEMY_H;*/
 
 			enemybullet[i].isuse = true;
 
@@ -111,4 +151,35 @@ void Enemy::shotEnemyBullet()
 
 		}
 	}
+}
+
+//“G‚Ì’e‚ÆƒvƒŒƒCƒ„[‚Ì“–‚½‚è”»’è
+void Enemy::EnemyBulletCllision()
+{
+	/*for (int enemybulletindex = 0; enemybulletindex < ENEMY_BULLET_MAX_NUM; enemybulletindex++)
+	{
+		if (enemybullet[enemybulletindex].isuse == false) {
+			continue;
+		}
+		if (IsHitCircle())
+		{
+
+		}
+	}*/
+}
+
+//“G‚ÆƒvƒŒƒCƒ„[‚Ì“–‚½‚è”»’è
+void Enemy::EnemyPlayerCollision()
+{
+	/*for (int i = 0; i < ENEMY_MAX_NUM; i++)
+	{
+		if (Enemy_is_alive == false) {
+			continue;
+		}
+
+		if (IsHitCircle())
+		{
+
+		}
+	}*/
 }

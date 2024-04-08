@@ -12,9 +12,6 @@
 void Boss::InitBoss()						//プレイ初期化
 {
 	Boss_handle = 0;						//画像ハンドル
-
-	Boss_ATK = BOSS_ATK;					//ボス攻撃力
-	Boss_HP = BOSS_HP;						//ボス体力
 	Boss_point = BOSS_POINT;				//ボスポイント
 	Boss_experience = BOSS_EXPERIENCE;		//ボス経験値
 	Radius = BOSS_RADIUS;					//半径
@@ -119,4 +116,16 @@ void Boss::MoveBossBullet()
 			}
 		}
 	}
+}
+
+//ボスの弾とプレイヤーの当たり判定
+void Boss::BossBulletCllision()
+{
+
+}
+
+//ボスとプレイヤーの当たり判定
+void Boss::BossPlayerCollision()
+{
+
 }

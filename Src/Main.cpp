@@ -163,6 +163,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			{
 				//クリア初期化
 				m_clear.InitClear();
+				//クリアロード
+				m_clear.LoadClear();
+
 			} break;
 			case SCENE_ID_LOOP_CLEAR:
 			{
@@ -170,6 +173,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				m_clear.StepClear();
 				//クリア描画処理
 				m_clear.DrawClear();
+
 			} break;
 			case SCENE_ID_FIN_CLEAR:
 			{

@@ -49,7 +49,6 @@ void StageSelect::InitStageSelect()
 	m_MenuBottanFlame_x = 302;
 	m_MenuBottanFlame_y = 324;
 
-
 	m_imagehandle[0] = LoadGraph(STAGE_SELECT_IMAGE_PATH[0]);	//ステージセレクト背景画像
 	m_imagehandle[1] = LoadGraph(STAGE_SELECT_IMAGE_PATH[1]);	//ステージセレクトタイトル画像
 	m_imagehandle[2] = LoadGraph(BOTTAN_IMAGE_PATH[0]);			//戻るボタン画像
