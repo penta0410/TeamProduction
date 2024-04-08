@@ -17,6 +17,7 @@ void Boss::InitBoss()						//プレイ初期化
 	Boss_HP = BOSS_HP;						//ボス体力
 	Boss_point = BOSS_POINT;				//ボスポイント
 	Boss_experience = BOSS_EXPERIENCE;		//ボス経験値
+	Radius = BOSS_RADIUS;					//半径
 	Boss_is_alive = true;					//ボス生存フラグ
 
 }

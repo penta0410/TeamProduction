@@ -8,6 +8,7 @@
 #define ENEMY_EXPERIENCE	  (2)								//“GŒoŒ±’l
 #define ENEMY_H				  (64)								//“Gc•
 #define ENEMY_W				  (64)								//“G‰¡•
+#define RADIUS				  (32)								//“G”¼Œa
 
 //“G’eî•ñ
 #define ENEMY_BULLRT_PATH	 "Data/EnemyImage/EnemyBullet.png"	//“G‚Ì’eƒpƒX
@@ -31,8 +32,11 @@ protected:
 	int Experience = 0;			//“G‚ÌŒoŒ±’l
 	int point = 0;				//“G‚Ì“¾“_
 	int EnemyATK = 0;			//“G‚ÌUŒ‚—Í
+	int Radius = 0;				//“G‚Ì”¼Œa
+
 	float EnemyPosx = 0.0f;		//XÀ•W
 	float EnemyPosy = 0.0f;		//YÀ•W
+
 	bool Enemy_is_alive;		//“G¶‘¶ƒtƒ‰ƒO
 
 
