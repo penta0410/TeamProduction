@@ -11,7 +11,7 @@ Enemy::~Enemy(){}			//ƒfƒXƒgƒ‰ƒNƒ^
 //“GƒXƒe[ƒ^ƒX
 void Enemy::InitEnemy()		//“G‰Šú‰»
 {
-	/*“G‰Šú‰»î•ñ*/
+	//“G‰Šú‰»î•ñ
 	handle = 0;							//“G‰æ‘œƒnƒ“ƒhƒ‹
 	Experience = ENEMY_EXPERIENCE;		//“GŒoŒ±’l
 	point = ENEMY_POINT;				//“G“¾“_
@@ -22,17 +22,17 @@ void Enemy::InitEnemy()		//“G‰Šú‰»
 
 void Enemy::LoadEnemy()		//“G“Ç‚İ‚İ
 {
-	/*handle=LoadGraph(ENEMY_PATH)		*/
+	handle = LoadGraph(ENEMY_PATH);
 }
 
 void Enemy::DrawEnemy()		//“G•`‰æ
 {
-	/*for (int i = 0; i < ENEMY_MAX_NUM; i++)
+	for (int i = 0; i < ENEMY_MAX_NUM; i++)
 	{
 		if (Enemy_is_alive) {
-			DrawRotaGraph();
+			DrawRotaGraph(EnemyPosx,EnemyPosy,1.0,0.0,handle,true);
 		}
-	}*/
+	}
 }
 
 bool Enemy::FinEnemy()		//“GŒãˆ—
@@ -63,19 +63,19 @@ void Enemy::InitEnemyBullet()
 //“G’e“Ç‚İ‚İ
 void Enemy::LoadEnemyBullet()
 {
-	//enemybullet->bullethandle= LoadGraph(ENEMY_BULLRT_PATH);
+	enemybullet->bullethandle= LoadGraph(ENEMY_BULLRT_PATH);
 }
 
 //“G’e•`‰æ
 void Enemy::DrawEnemyBullet()
 {
-	/*for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
+	for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
 	{
 		if (enemybullet->isuse)
 		{
-			DrawRotaGraph();
+			DrawRotaGraph(enemybullet[i].x,enemybullet[i].y,1.0,0.0,enemybullet[i].bullethandle,true);
 		}
-	}*/
+	}
 }
 
 //“G’eˆÚ“®ˆ—
@@ -97,7 +97,7 @@ void Enemy::MoveEnemyBullet()
 //“G’e”­Ëˆ—
 void Enemy::shotEnemyBullet()
 {
-	/*for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
+	for (int i = 0; i < ENEMY_BULLET_MAX_NUM; i++)
 	{
 		if (enemybullet[i].isuse)
 		{
@@ -109,5 +109,5 @@ void Enemy::shotEnemyBullet()
 			break;
 
 		}
-	}*/
+	}
 }

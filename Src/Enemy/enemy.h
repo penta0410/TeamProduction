@@ -1,17 +1,17 @@
 #pragma once
 
 //“Gî•ñ
-#define	ENEMY_PATH						//“G‚Ì’eƒpƒX
-#define ENEMY_MAX_NUM		  (40)		//“G‚Ì”
-#define ENEMY_ATK			  (1)		//“GUŒ‚—Í
-#define ENEMY_POINT			  (3)		//“G“¾“_
-#define ENEMY_EXPERIENCE	  (2)		//“GŒoŒ±’l
-#define ENEMY_H							//“Gc•
-#define ENEMY_W							//“G‰¡•
+#define	ENEMY_PATH			  "Data/EnemyImage/Tameo.png"		//“G‚Ì’eƒpƒX
+#define ENEMY_MAX_NUM		  (40)								//“G‚Ì”
+#define ENEMY_ATK			  (1)								//“GUŒ‚—Í
+#define ENEMY_POINT			  (3)								//“G“¾“_
+#define ENEMY_EXPERIENCE	  (2)								//“GŒoŒ±’l
+#define ENEMY_H				  (64)								//“Gc•
+#define ENEMY_W				  (64)								//“G‰¡•
 
 //“G’eî•ñ
-#define ENEMY_BULLRT_PATH				//“G‚Ì’eƒpƒX
-#define ENEMY_BULLET_MAX_NUM  (20)		//“G’e”
+#define ENEMY_BULLRT_PATH	 "Data/EnemyImage/EnemyBullet.png"	//“G‚Ì’eƒpƒX
+#define ENEMY_BULLET_MAX_NUM  (20)								//“G’e”
 
 struct Enemybullet
 {

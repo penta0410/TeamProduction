@@ -23,22 +23,20 @@ void Boss::InitBoss()						//プレイ初期化
 
 void Boss::LoadBoss()						//ボス読み込み
 {
-	//Boss_handle = LoadGraph(BOSS_IMAGE_PATH);	//画像ができるまで
+	Boss_handle = LoadGraph(BOSS_IMAGE_PATH);	//画像ができるまで
 }
 
 void Boss::DrawBoss()						//ボス描画
 {
-	/*for (int i = 0; i < BOSS_MAX_NUM; i++)
+	for (int i = 0; i < BOSS_MAX_NUM; i++)
 	{
 		if (Boss_is_alive)
 		{
-			DrawRotaGraph()
+			DrawRotaGraph(BossX,BossY,1.0f,0.0,Boss_handle,true);
 		}
-	}*/
+	}
 	
 }
-
-
 
 bool Boss::FinBoss()						//ボス後処理
 {
@@ -60,48 +58,48 @@ void InitBossBullet()
 {
 	for (int i = 0; i < BOSS_BULLET_MAX_NUM; i++)
 	{
-		bossbulletIndex->bosshandle = 0;
+		bossbulletIndex->bossBullethandle = 0;
 		bossbulletIndex->x = 0;
 		bossbulletIndex->y = 0;
 		bossbulletIndex->BossbulletUse = false;
 	}
 }
 
-//bool Boss::BossShotBullet(int shotPosX, int shotPosY)
-//{
-//	for (int i = 0; i < BOSS_BULLET_MAX_NUM; i++)
-//	{
-//		if (bossbulletIndex[i].BossbulletUse)
-//		{
-//			//弾座標の初期位置に敵の座標
-//			bossbulletIndex[i].x = shotPosX;
-//			bossbulletIndex[i].y = shotPosY + BOSS_H;
-//			bossbulletIndex[i].BossbulletUse = true;
-//
-//			//発射成功
-//			return true;
-//		}
-//	}
-//	//失敗
-//	return false;
-//}
+bool Boss::BossShotBullet(int shotPosX, int shotPosY)
+{
+	for (int i = 0; i < BOSS_BULLET_MAX_NUM; i++)
+	{
+		if (bossbulletIndex[i].BossbulletUse)
+		{
+			//弾座標の初期位置に敵の座標
+			bossbulletIndex[i].x = shotPosX;
+			bossbulletIndex[i].y = shotPosY + BOSS_H;
+			bossbulletIndex[i].BossbulletUse = true;
+
+			//発射成功
+			return true;
+		}
+	}
+	//失敗
+	return false;
+}
 
 //ボス弾読み込み
 void Boss::LoadBossBullet()
 {
-	//bossbulletIndex->bosshandle = LoadGraph(BOSS_BULLET_PATH);
+	bossbulletIndex->bossBullethandle = LoadGraph(BOSS_BULLET_PATH);
 }
 
 //ボス弾描画
 void Boss::DrawBossBullet()
 {
-	/*for (int i = 0; i < BOSS_BULLET_MAX_NUM; i++)
+	for (int i = 0; i < BOSS_BULLET_MAX_NUM; i++)
 	{
-		if (bossbulletIndex->isuse)
+		if (bossbulletIndex->BossbulletUse)
 		{
-			DrawRotaGraph();
+			DrawRotaGraph(bossbulletIndex[i].x,bossbulletIndex[i].y,1.0f,0.0,bossbulletIndex[i].bossBullethandle,true);
 		}
-	}*/
+	}
 }
 
 //ボス弾移動処理

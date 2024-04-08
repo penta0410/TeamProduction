@@ -1,21 +1,21 @@
 #pragma once
 #include "enemy.h"
 
-#define BOSS_MAX_NUM	  (1)		//ボス最大数
-#define BOSS_IMAGE_PATH				//ボス画像パス
-#define BOSS_EXPERIENCE	  (5)		//ボス経験値
-#define	BOSS_POINT		  (10)		//ボスから獲得できる得点
-#define	BOSS_HP			  (20)		//ボスデフォルト体力
-#define BOSS_ATK		  (3)		//ボスデフォルト攻撃力
-#define BOSS_W						//ボス横サイズ
-#define BOSS_H						//ボス縦サイズ
+#define BOSS_MAX_NUM	  (1)									//ボス最大数
+#define BOSS_IMAGE_PATH	  "Data/EnemyImage/kariEnemy.png"		//ボス画像パス
+#define BOSS_EXPERIENCE	  (5)									//ボス経験値
+#define	BOSS_POINT		  (10)									//ボスから獲得できる得点
+#define	BOSS_HP			  (20)									//ボスデフォルト体力
+#define BOSS_ATK		  (3)									//ボスデフォルト攻撃力
+#define BOSS_W			  (120)									//ボス横サイズ
+#define BOSS_H			  (120)									//ボス縦サイズ
 
-#define BOSS_BULLET_PATH			//画像パス
-#define BOSS_BULLET_MAX_NUM (50)	//ボス弾数
+#define BOSS_BULLET_PATH  "Data/EnemyImage/BossBullet.png"		//画像パス
+#define BOSS_BULLET_MAX_NUM (50)								//ボス弾数
 
 struct BossBullet
 {
-	int bosshandle;
+	int bossBullethandle;
 	int x, y;
 	bool BossbulletUse;
 };
