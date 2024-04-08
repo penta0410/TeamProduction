@@ -30,10 +30,6 @@ protected:
 	int handle = 0;				//画像ハンドル
 	int Experience = 0;			//敵の経験値
 	int point = 0;				//敵の得点
-	int Radius = 0;				//敵の半径
-
-	float EnemyPosx[ENEMY_MAX_NUM] = { 0.0f };		//X座標
-	float EnemyPosy[ENEMY_MAX_NUM] = { 0.0f };		//Y座標
 
 	bool Enemy_is_alive;		//敵生存フラグ
 
@@ -42,6 +38,10 @@ protected:
 	int m_EnemyMoveFlame = 0;
 
 public:
+	int Radius = 0;				//敵の半径
+
+	float EnemyPosx[ENEMY_MAX_NUM] = { 0.0f };		//X座標
+	float EnemyPosy[ENEMY_MAX_NUM] = { 0.0f };		//Y座標
 
 	Enemy();					//コンストラクタ
 	~Enemy();					//デストラクタ

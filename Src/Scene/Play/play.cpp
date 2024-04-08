@@ -131,7 +131,18 @@ void Play::StepPlay(int hp)
 		g_CurrentSceneID = SCENE_ID_FIN_PLAY;
 
 	}
+	//当たり判定
+	for (int m_enemy_num = 0; m_enemy_num <= ENEMY_MAX_NUM; m_enemy_num++)
+	{
+		if (m_player.IsHit_Enemy(m_enemy.EnemyPosx[m_enemy_num], m_enemy.EnemyPosx[m_enemy_num], m_enemy.Radius))
+		{
+			//プレイシーンフラグをクリアシーンに変更
+			m_SceneFlag = 1;
 
+			//'プレイ後処理'へ移動
+			g_CurrentSceneID = SCENE_ID_FIN_PLAY;
+		}
+	}
 }
 
 //プレイ描画処理

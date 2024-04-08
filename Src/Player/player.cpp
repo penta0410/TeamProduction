@@ -25,7 +25,7 @@ void Player::Init()
 {
 	image_handle = 0;							
 
-	radius = 200;//‰¼
+	radius = 60;//‰¼
 	posX = WINDOW_WIDTH / 2;
 	posY = WINDOW_HEIGHT - (PLAYER_H / 2);
 
