@@ -3,7 +3,6 @@
 //“Gî•ñ
 #define	ENEMY_PATH			  "Data/EnemyImage/Tameo.png"		//“G‚Ì’eƒpƒX
 #define ENEMY_MAX_NUM		  (40)								//“G‚Ì”
-#define ENEMY_ATK			  (1)								//“GUŒ‚—Í
 #define ENEMY_POINT			  (3)								//“G“¾“_
 #define ENEMY_EXPERIENCE	  (2)								//“GŒoŒ±’l
 #define ENEMY_H				  (64)								//“Gc•
@@ -31,7 +30,6 @@ protected:
 	int handle = 0;				//‰æ‘œƒnƒ“ƒhƒ‹
 	int Experience = 0;			//“G‚ÌŒoŒ±’l
 	int point = 0;				//“G‚Ì“¾“_
-	int EnemyATK = 0;			//“G‚ÌUŒ‚—Í
 	int Radius = 0;				//“G‚Ì”¼Œa
 
 	float EnemyPosx = 0.0f;		//XÀ•W

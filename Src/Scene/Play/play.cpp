@@ -97,6 +97,9 @@ void Play::StepPlay(int hp)
 //ƒvƒŒƒC•`‰æˆ—
 void Play::DrawPlay(int hp)
 {
+	//“G•`‰æ
+	m_enemy.DrawEnemy();
+	m_enemy.DrawEnemyBullet();
 
 	//ƒvƒŒƒC”wŒi•`‰æ
 	DrawRotaGraph(m_Back_x, m_Back_y, 1.0f, 0.0f, m_imagehandle[0], true);

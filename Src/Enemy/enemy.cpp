@@ -15,7 +15,6 @@ void Enemy::InitEnemy()		//“G‰Šú‰»
 	handle = 0;							//“G‰æ‘œƒnƒ“ƒhƒ‹
 	Experience = ENEMY_EXPERIENCE;		//“GŒoŒ±’l
 	point = ENEMY_POINT;				//“G“¾“_
-	EnemyATK = ENEMY_ATK;				//“GUŒ‚—Í
 	Radius = RADIUS;					//“G”¼Œa
 
 	Enemy_is_alive = true;				//“G¶‘¶ƒtƒ‰ƒO
