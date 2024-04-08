@@ -85,6 +85,7 @@ bool Player::Input_LeftAndRight()
 	if(Input_Left()&& Input_Right())
 		return true;
 }
+
 void Player::Level_Up()
 {
 	if (LEVEL < PLAYER_BEGINNER_LEVEL)
@@ -104,6 +105,7 @@ void Player::Level_Up()
 		}
 	}
 }
+
 void Player::Invisible_Time()
 {
 	if (invisible)
