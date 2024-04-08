@@ -15,6 +15,7 @@
 #define PLAYER_H				   220								//プレイヤーの縦サイズ
 #define LEVEL_DEFAULT_BORDER_LINE  5								//プレイヤーのデフォルトのレベル境界線
 #define INVISIBLE_COOL_TIME		   60								//プレイヤーの無敵時間
+
 class Player
 {
 private:
@@ -49,6 +50,8 @@ public:
 															//プレイヤーの読み込み
 	void LoadPlayer();									
 															//プレイヤーの基本的な移動
+	void DrawPlayer();		
+															//プレイヤー描画
 	void MovePlayer();		
 															//Aキーまたは←キーを押しているか
 	bool Input_Left();

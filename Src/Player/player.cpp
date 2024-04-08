@@ -46,6 +46,12 @@ void Player::LoadPlayer()
 	image_handle = LoadGraph(PLAYER_IMAGE_PATH);
 }
 
+//ƒvƒŒƒCƒ„[•`‰æˆ—
+void Player::DrawPlayer()
+{
+	DrawRotaGraph(posX, posY, 1.0f, 0.0f, image_handle, true);
+}
+
 void Player::MovePlayer()
 {
 	if (Input_Left())		 posX -= move_x;
@@ -108,6 +114,7 @@ void  Player::SetPlayer_Hp(int hp)
 {
 	HP = HP + hp;
 }
+
 void Player::AttackPattern::beam()
 {
 

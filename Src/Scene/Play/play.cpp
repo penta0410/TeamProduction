@@ -29,6 +29,9 @@ void Play::InitPlay()
 	//プレイヤー初期化
 	m_player.Init();
 
+	//プレイヤー読み込み
+	m_player.LoadPlayer();
+
 	//敵初期化
 	m_enemy.InitEnemy();
 
@@ -58,6 +61,7 @@ void Play::StepPlay(int hp)
 		m_Back_y += BACK_SPEED;
 		m_Back_y_2 += BACK_SPEED;
 	}
+
 	//スクロール処理
 	if (m_Back_y > 360 + 710)
 	{
@@ -108,16 +112,19 @@ void Play::StepPlay(int hp)
 //プレイ描画処理
 void Play::DrawPlay(int hp)
 {
-	//敵描画
-	m_enemy.DrawEnemy();
-	m_enemy.DrawEnemyBullet();
-
 	//プレイ背景描画
 	DrawRotaGraph(m_Back_x, m_Back_y, 1.0f, 0.0f, m_imagehandle[0], true);
 	DrawRotaGraph(m_Back_x, m_Back_y_2, 1.0f, 0.0f, m_imagehandle[0], true);
 
-	DrawFormatString(100, 100, GetColor(0, 0, 0), "%d", m_player.GetPlayer_Hp() + 
-		hp, true);
+	/*DrawFormatString(100, 100, GetColor(0, 0, 0), "%d", m_player.GetPlayer_Hp() + 
+		hp, true);*/
+	
+	//プレイヤー描画
+	m_player.DrawPlayer();
+	
+	//敵描画
+	m_enemy.DrawEnemy();
+	m_enemy.DrawEnemyBullet();
 
 }
 
