@@ -8,7 +8,7 @@
 #include "../Collision/Collision.h"
 #include "../Enemy/Enemy.h"
 #include "../Common.h"
-
+#include<math.h>
 
 Player::Player()
 {
@@ -108,32 +108,80 @@ void  Player::SetPlayer_Hp(int hp)
 {
 	HP = HP + hp;
 }
-void Player::AttackPattern::beam()
+//プレイヤー弾初期化
+void Player::fireball::init_Bullet()
+{
+	for (int i = 0; i < PLAYER_BULLET_MAX_NUM; i++)
+	{
+		handle = 0;		//弾画像ハンドル
+		x = 0;			//X座標
+		y = 0;			//Y座標
+		isuse = false;	//使用中フラグ
+	}
+}
+void Player::beam::load()
 {
 
 }
-void Player::AttackPattern::arrow()
+void Player::arrow::load()
 {
 
 }
-void Player::AttackPattern::slash()
+void Player::slash::load()
 {
 
 }
-void Player::AttackPattern::fireball()
+void Player::fireball::load()
 {
 
 }
-void Player::AttackPattern::coldball()
+void Player::coldball::load()
 {
 
 }
-void Player::AttackPattern::thunderball()
+void Player::thunderball::load()
 {
 
 }
-void Player::AttackPattern::darkball()
+void Player::darkball::load()
+{
+
+}
+void  Player::boomerang::load()
 {
 
 }
 
+
+void Player::beam::move()
+{
+
+}
+void Player::arrow::move()
+{
+
+}
+void Player::slash::move()
+{
+
+}
+void Player::fireball::move()
+{
+
+}
+void Player::coldball::move()
+{
+
+}
+void Player::thunderball::move()
+{
+
+}
+void Player::darkball::move()
+{
+
+}
+void  Player::boomerang::move()
+{
+
+}

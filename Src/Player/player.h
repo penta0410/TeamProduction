@@ -15,6 +15,7 @@
 #define PLAYER_H				   220								//プレイヤーの縦サイズ
 #define LEVEL_DEFAULT_BORDER_LINE  5								//プレイヤーのデフォルトのレベル境界線
 #define INVISIBLE_COOL_TIME		   60								//プレイヤーの無敵時間
+#define PLAYER_BULLET_MAX_NUM	   50								//プレイヤーの弾数
 class Player
 {
 private:
@@ -63,20 +64,58 @@ public:
 	void  SetPlayer_Hp(int hp);									
 															//プレイヤー無敵処理
 	void Invisible_Time();
-															//エネミーに当たったら
-	void Hit_enemy();
-	class AttackPattern
-	{
-	private:
+			
 
-	public:
-		void beam();
-		void arrow();
-		void slash();
-		void fireball();
-		void coldball();
-		void thunderball();
-		void darkball();
-	};
+		class bullet
+		{
+		protected:
+			int handle = 0;
+			int x, y = 0;
+			bool isuse = false;
+			void init_Bullet();
+		};
 
+		class fireball :public bullet
+		{
+			void load();
+			void move();
+		};
+		class coldball :public bullet
+		{
+			void load();
+			void move();
+		};
+		class darkball :public bullet
+		{
+			void load();
+			void move();
+		};
+		class thunderball :public bullet
+		{
+			void load();
+			void move();
+		};
+		class beam :public bullet
+		{
+			void load();
+			void move();
+		};
+		class arrow :public bullet
+		{
+			void load();
+			void move();
+		};
+		class slash :public bullet
+		{
+			void load();
+			void move();
+		};
+		class boomerang :public bullet
+		{
+			void load();
+			void move();
+		};
+		
+		
+		
 };
