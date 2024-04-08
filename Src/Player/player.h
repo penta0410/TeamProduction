@@ -14,7 +14,7 @@
 #define PLAYER_W				   150								//プレイヤーの横サイズ
 #define PLAYER_H				   220								//プレイヤーの縦サイズ
 #define LEVEL_DEFAULT_BORDER_LINE  5								//プレイヤーのデフォルトのレベル境界線
-
+#define INVISIBLE_COOL_TIME		   60								//プレイヤーの無敵時間
 class Player
 {
 private:
@@ -33,8 +33,10 @@ private:
 	int ATK_SPEED = 0;										//プレイヤーの攻撃速度
 	int Move_Speed = 0;										//プレイヤーの移動速度
 	int DEF = 0;											//プレイヤーの守備力
-	int level_border_line = 5;								//レベルの境界線
-
+	int level_border_line = 0;								//レベルの境界線
+	bool invisible = false;									//無敵状態
+	int invisible_cool_time = 0;							//プレイヤーの無敵時間
+	float radius = 0;										//プレイヤーの半径
 public:
 
 															//コンストラクタ
@@ -55,11 +57,14 @@ public:
 	bool Input_LeftAndRight();
 															//プレイヤーのレベル処理
 	void Level_Up();
-
-	int GetPlayer_Hp() { return HP; };						//プレイヤーHPゲット処理
-	
-	void  SetPlayer_Hp(int hp);									//プレイヤーｈｐセット
-
+															//プレイヤーHPゲット処理
+	int GetPlayer_Hp() { return HP; };						
+															//プレイヤーｈｐセット
+	void  SetPlayer_Hp(int hp);									
+															//プレイヤー無敵処理
+	void Invisible_Time();
+															//エネミーに当たったら
+	void Hit_enemy();
 	class AttackPattern
 	{
 	private:
@@ -73,4 +78,5 @@ public:
 		void thunderball();
 		void darkball();
 	};
+
 };

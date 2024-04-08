@@ -24,17 +24,21 @@ void Player::Init()
 {
 	image_handle = 0;							
 
+	radius=
 	posX = WINDOW_WIDTH / 2;
 	posY = WINDOW_HEIGHT - (PLAYER_H / 2);
 
-	move_x			 = PLAYER_DEFAULT_MOVE_X;
-	HP			     = PLAYER_DEFAULT_HP;
-	ATK				 = PLAYER_DEFAULT_ATK;
-	ATK_SPEED		 = PLAYER_DEFAULT_ATK_SPEED;
-	DEF			     = PLAYER_DEFAULT_DEF;
-	Move_Speed       = PLAYER_DEFAULT_SPEED;
-	EXPERIENCE_POINT = 0;
-	LEVEL		     = PLAYER_DEFAULT_LEVEL;
+	move_x			    = PLAYER_DEFAULT_MOVE_X;
+	HP			        = PLAYER_DEFAULT_HP;
+	ATK					= PLAYER_DEFAULT_ATK;
+	ATK_SPEED		    = PLAYER_DEFAULT_ATK_SPEED;
+	DEF				    = PLAYER_DEFAULT_DEF;
+	Move_Speed          = PLAYER_DEFAULT_SPEED;
+	EXPERIENCE_POINT    = 0;
+	LEVEL		        = PLAYER_DEFAULT_LEVEL;
+	level_border_line   = LEVEL_DEFAULT_BORDER_LINE;
+	invisible_cool_time = INVISIBLE_COOL_TIME;
+	invisible			= false;
 }
 
 void Player::LoadPlayer()
@@ -86,9 +90,69 @@ void Player::Level_Up()
 		}
 	}
 }
+void Player::Invisible_Time()
+{
+	if (invisible)
+	{
+		invisible_cool_time++;
+		if (invisible_cool_time > 60)
+		{
+			invisible_cool_time = 0;
+			invisible = false;
+		}
+	}
+}
+void Player::Hit_enemy()
+{
+	//if (!invisible)
+	//{
+	//	// プレイヤーと敵の当たり判定
+	//	for (int i = 0; i < ENEMY_MAX_NUM; i++)
+	//	{
+	//		if (enemyInfo_B[i].isactive)
+	//		{
+	//			if (IsHitCircle(playerInfo.x, playerInfo.y, 16,
+	//				enemyInfo_B[i].x, enemyInfo_B[i].y, 16))
+	//			{
 
+
+	//			}
+
+	//		}
+	//	}
+	//}
+}
 //プレイヤーｈｐセット
 void  Player::SetPlayer_Hp(int hp)
 {
 	HP = HP + hp;
 }
+void Player::AttackPattern::beam()
+{
+
+}
+void Player::AttackPattern::arrow()
+{
+
+}
+void Player::AttackPattern::slash()
+{
+
+}
+void Player::AttackPattern::fireball()
+{
+
+}
+void Player::AttackPattern::coldball()
+{
+
+}
+void Player::AttackPattern::thunderball()
+{
+
+}
+void Player::AttackPattern::darkball()
+{
+
+}
+
