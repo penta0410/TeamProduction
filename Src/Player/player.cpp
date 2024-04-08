@@ -102,26 +102,7 @@ void Player::Invisible_Time()
 		}
 	}
 }
-void Player::Hit_enemy()
-{
-	//if (!invisible)
-	//{
-	//	// プレイヤーと敵の当たり判定
-	//	for (int i = 0; i < ENEMY_MAX_NUM; i++)
-	//	{
-	//		if (enemyInfo_B[i].isactive)
-	//		{
-	//			if (IsHitCircle(playerInfo.x, playerInfo.y, 16,
-	//				enemyInfo_B[i].x, enemyInfo_B[i].y, 16))
-	//			{
 
-
-	//			}
-
-	//		}
-	//	}
-	//}
-}
 //プレイヤーｈｐセット
 void  Player::SetPlayer_Hp(int hp)
 {
