@@ -36,7 +36,7 @@ void Enemy::DrawEnemy()		//“G•`‰æ
 	}
 }
 
-bool Enemy::FinEnemy()		//“GŒãˆ—
+bool Enemy::KillEnemy()		//“Gˆ—
 {
 	for (int i = 0; i < ENEMY_MAX_NUM; i++)
 	{

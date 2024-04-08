@@ -52,8 +52,8 @@ public:
 	//“G‚Ì•`‰æ
 	void DrawEnemy();
 
-	//“G‚ÌŒãˆ—
-	bool FinEnemy();
+	//“G‚Ìˆ—
+	bool KillEnemy();
 
 	//“G’e‰Šú‰»
 	void InitEnemyBullet();
