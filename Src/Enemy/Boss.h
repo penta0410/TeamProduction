@@ -23,7 +23,7 @@ BossBullet bossbulletIndex[BOSS_BULLET_MAX_NUM] = { 0 };
 
 class Boss:public Enemy
 {
-protected:
+private:
 
 	//敵情報
 	int Boss_handle = 0;			//ボス画像ハンドル

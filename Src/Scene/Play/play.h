@@ -3,6 +3,7 @@
 #include "../../Player/player.h"
 #include "../../Enemy/enemy.h"
 #include "../Shop/shop.h"
+#include "../../Enemy/Boss.h"
 
 const int PLAY_IMAGE_NUMBER = 3;	//‰æ‘œ–‡”
 

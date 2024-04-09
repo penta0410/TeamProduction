@@ -132,6 +132,7 @@ bool Player::IsHit_Enemy(float enemyx, float enemyy, float enemyradius)
 		return true;
 	else return false;
 }
+
 //ƒvƒŒƒCƒ„[’e‰Šú‰»
 void Player::bullet::init_Bullet()
 {
